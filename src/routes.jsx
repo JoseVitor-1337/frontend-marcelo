@@ -1,11 +1,17 @@
 import React from "react";
-import { BrowserRouter as Routes, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Routes, Switch } from "react-router-dom";
 import "./style.css";
+
+import LoginForm from "./pages/LoginForm";
+
+import PublicRouter from "./routes/PublicRouter";
 
 const Routes = () => {
   return (
     <Routes>
-      <Switch></Switch>
+      <Switch>
+        <PublicRouter exact path="/" component={LoginForm} />
+      </Switch>
     </Routes>
   );
 };

@@ -1,13 +1,17 @@
 import React, { useEffect } from "react";
-im;
-import "./style.css";
+import { Route, useHistory } from "react-router-dom";
 
-const ResearcherRoutes = () => {
-  return (
-    <div>
-      <p>ResearcherRoutes</p>
-    </div>
-  );
+const ResearcherRoutes = ({ path, exact, component }) => {
+  const navigation = useHistory();
+  const userType = localStorage.getItem("userType");
+
+  useEffect(() => {
+    if (userType !== "researcher") {
+      navigation.goBack();
+    }
+  }, [userType]);
+
+  return <Route exact={exact} path={path} component={component} />;
 };
 
 export default ResearcherRoutes;
