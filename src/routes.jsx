@@ -1,6 +1,5 @@
 import React from "react";
-import { BrowserRouter as Routes, Switch } from "react-router-dom";
-import "./style.css";
+import { BrowserRouter, Switch } from "react-router-dom";
 
 import LoginForm from "./pages/LoginForm";
 
@@ -8,11 +7,11 @@ import PublicRouter from "./routes/PublicRouter";
 
 const Routes = () => {
   return (
-    <Routes>
+    <BrowserRouter>
       <Switch>
         <PublicRouter exact path="/" component={LoginForm} />
       </Switch>
-    </Routes>
+    </BrowserRouter>
   );
 };
 
