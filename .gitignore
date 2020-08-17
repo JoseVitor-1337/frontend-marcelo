@@ -5,3 +5,6 @@ yarn.lock
 package-lock.json
 
 debug.log
+
+# Local Netlify folder
+.netlify
