@@ -15,7 +15,7 @@ const TextInput = (props) => {
   return (
     <div className="input-group">
       <label htmlFor={name}>{props.label}</label>
-      <input type="text" name={name} id={name} pattern={pattern} required />
+      <input type="text" name={name} id={name} required />
     </div>
   );
 };

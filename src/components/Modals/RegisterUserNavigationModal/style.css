@@ -1,0 +1,47 @@
+div.modal {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+div.modal-content {
+  position: relative;
+  min-width: 35%;
+  background-color: white;
+  padding: 1.2rem;
+  border-radius: 0.8rem;
+
+  text-align: center;
+  z-index: 1;
+}
+
+div.modal-content img {
+  width: 2.4rem;
+  height: 2.4rem;
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  cursor: pointer;
+  transition: all 0.5s;
+  z-index: 1;
+  fill: red;
+}
+
+div.modal-content img:hover {
+  filter: hue-rotate(70deg);
+}
+
+div.modal-header h2 {
+  font-size: 1.6rem;
+  margin: 1rem 0rem;
+  margin-bottom: 5rem;
+  z-index: 1;
+}
+
+div.modal-body {
+  width: 100%;
+  z-index: 1;
+}
