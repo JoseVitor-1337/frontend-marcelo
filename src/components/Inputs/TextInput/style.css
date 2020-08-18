@@ -1,0 +1,28 @@
+div.input-group {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+}
+
+div.input-group label {
+  width: 10%;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary-color);
+  margin-bottom: 0.4rem;
+  cursor: pointer;
+}
+
+div.input-group input {
+  outline: none;
+  padding: 0.5rem 0.4rem;
+  margin: 0;
+  border: 1.5px solid var(--shadow-color);
+  transition: border 0.5s;
+}
+
+div.input-group input:focus {
+  border: 1.5px solid var(--primary-color);
+}

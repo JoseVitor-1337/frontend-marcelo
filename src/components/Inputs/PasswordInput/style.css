@@ -1,0 +1,14 @@
+div.input-group {
+  position: relative;
+}
+
+img.password-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  position: absolute;
+  bottom: 0.6rem;
+  right: 0.6rem;
+
+  cursor: pointer;
+  z-index: 1;
+}

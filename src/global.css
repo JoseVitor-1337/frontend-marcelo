@@ -1,14 +1,21 @@
 :root {
   --primary-color: #2460f9;
-  --text-color: #000000;
+  --primary-color-hover: #43afec;
+  --text-primary-color: rgba(0, 0, 0, 0.55);
+  --text-secondary-color: #ffffff;
   --shadow-color: rgba(0, 0, 0, 0.25);
-  --secondary-color: #white;
+  --secondary-color: #ffffff;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+h1,
+h2 {
+  margin: 0;
 }
 
 body {
@@ -26,6 +33,11 @@ p,
 span {
   font-family: "Rubik", sans-serif;
   font-weight: 400;
+}
+
+button {
+  outline: none;
+  border: 0;
 }
 
 button,

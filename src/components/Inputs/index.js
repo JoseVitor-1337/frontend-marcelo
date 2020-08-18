@@ -1,2 +1,3 @@
-export * from "./Password";
-export * from "./Text";
+export * from "./PasswordInput";
+export * from "./TextInput";
+export * from "./CheckBoxInput";
