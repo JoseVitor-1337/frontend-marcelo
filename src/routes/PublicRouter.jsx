@@ -6,7 +6,7 @@ const PublicRouter = ({ path, exact, component }) => {
   const userType = localStorage.getItem("userType");
 
   useEffect(() => {
-    if (!userType) {
+    if (userType !== null) {
       navigation.goBack();
     }
   }, [navigation, userType]);
