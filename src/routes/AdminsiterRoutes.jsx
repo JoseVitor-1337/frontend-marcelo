@@ -9,7 +9,7 @@ const AdminsiterRoutes = ({ path, exact, component }) => {
     if (userType !== "administer") {
       navigation.goBack();
     }
-  }, [userType]);
+  }, [navigation, userType]);
 
   return <Route exact={exact} path={path} component={component} />;
 };

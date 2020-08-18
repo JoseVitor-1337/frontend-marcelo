@@ -9,7 +9,7 @@ const ParticipantRoutes = ({ path, exact, component }) => {
     if (userType !== "participant") {
       navigation.goBack();
     }
-  }, [userType]);
+  }, [navigation, userType]);
 
   return <Route exact={exact} path={path} component={component} />;
 };

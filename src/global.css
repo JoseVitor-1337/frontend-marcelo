@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #a824f9;
+  --primary-color: #2460f9;
   --text-color: #000000;
   --shadow-color: rgba(0, 0, 0, 0.25);
   --secondary-color: #white;
@@ -9,6 +9,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+
+  width: 100vw;
+  height: 100vh;
 }
 
 input,

@@ -9,7 +9,7 @@ const ResearcherRoutes = ({ path, exact, component }) => {
     if (userType !== "researcher") {
       navigation.goBack();
     }
-  }, [userType]);
+  }, [navigation, userType]);
 
   return <Route exact={exact} path={path} component={component} />;
 };

@@ -9,7 +9,7 @@ const PublicRouter = ({ path, exact, component }) => {
     if (!userType) {
       navigation.goBack();
     }
-  }, [userType]);
+  }, [navigation, userType]);
 
   return <Route exact={exact} path={path} component={component} />;
 };
