@@ -1,10 +1,21 @@
 import React from "react";
 import { NavigationButton } from "../../Buttons";
+import { useHistory } from "react-router-dom";
 import "./style.css";
 
 import closeIcon from "../../../assets/icons/close.svg";
 
 const RegisterUserNavigationModal = ({ closeModal }) => {
+  const navigation = useHistory();
+
+  function goToParticipantRegister() {
+    navigation.push("/register/participant");
+  }
+
+  function goToResearcherRegister() {
+    navigation.push("/register/researcher");
+  }
+
   return (
     <div className="modal">
       <div className="modal-content">
@@ -20,8 +31,14 @@ const RegisterUserNavigationModal = ({ closeModal }) => {
         </div>
 
         <div className="modal-body">
-          <NavigationButton title="Participante" />
-          <NavigationButton title="Pesquisador" />
+          <NavigationButton
+            action={goToParticipantRegister}
+            title="Participante"
+          />
+          <NavigationButton
+            action={goToResearcherRegister}
+            title="Pesquisador"
+          />
         </div>
       </div>
     </div>

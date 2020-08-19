@@ -31,7 +31,7 @@ div.modal-content img {
 }
 
 div.modal-content img:hover {
-  filter: hue-rotate(70deg);
+  filter: brightness(0.9);
 }
 
 div.modal-header h2 {

@@ -11,6 +11,10 @@ button.submit {
   overflow: hidden;
   cursor: pointer;
   transition: 0.5s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 button.submit:hover {

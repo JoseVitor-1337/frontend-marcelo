@@ -11,6 +11,11 @@ div.checkbox input {
   display: none;
 }
 
+div.checkbox label {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
 div.checkbox input + label::before {
   content: "";
   width: 1rem;
