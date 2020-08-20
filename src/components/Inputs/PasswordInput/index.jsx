@@ -3,7 +3,7 @@ import passwordVisibleIcon from "../../../assets/icons/password-visible.svg";
 import passwordHiddenIcon from "../../../assets/icons/password-hidden.svg";
 import "./style.css";
 
-const PasswordInput = (props) => {
+const PasswordInput = ({ label, name, password }) => {
   const [passwordIcon, setPasswordIcon] = useState({
     icon: passwordHiddenIcon,
     type: "password",
@@ -27,8 +27,8 @@ const PasswordInput = (props) => {
 
   return (
     <div className="input-group">
-      <label htmlFor="password">{props.label}</label>
-      <input type={type} name="password" id="password" required />
+      <label htmlFor={name}>{label}</label>
+      <input type={type} name={name} id={name} required />
       <img
         onClick={changePasswordVisibilit}
         className="password-icon"

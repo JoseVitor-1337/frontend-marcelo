@@ -2,7 +2,6 @@ div.login-form {
   position: relative;
   background-color: var(--secondary-color);
   min-width: 32rem;
-  min-height: 25rem;
   padding: 0.4rem 0.5rem;
   border-radius: 0.4rem;
 

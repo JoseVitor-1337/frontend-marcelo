@@ -2,9 +2,13 @@
   --primary-color: #2172bd;
   --primary-color-hover: #43a2fa;
   --text-primary-color: rgba(0, 0, 0, 0.55);
+  --text-error-color: #f12531;
+  --text-correct-color: #24f452;
   --text-secondary-color: #ffffff;
   --shadow-color: rgba(0, 0, 0, 0.25);
   --secondary-color: #ffffff;
+
+  font-size: 80%;
 }
 
 * {
@@ -26,14 +30,12 @@ body {
   align-items: center;
   justify-content: center;
   background-color: var(--primary-color);
-
-  width: 100vw;
-  height: 100vh;
 }
 
 input,
-p,
-span {
+span,
+p {
+  font-size: 1rem;
   font-weight: 500;
 }
 
@@ -42,6 +44,14 @@ button {
   border: 0;
 }
 
+label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary-color);
+  margin-bottom: 0.4rem;
+  cursor: pointer;
+}
+span,
 button,
 label {
   font-family: "Rasa", serif;
