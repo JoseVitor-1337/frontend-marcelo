@@ -1,0 +1,41 @@
+{
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontWeight": "500",
+  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+  "editor.renderLineHighlight": "gutter",
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.suggest.autoImports": false,
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+
+  "explorer.confirmDelete": false,
+  "git.enableSmartCommit": true,
+  "debug.focusWindowOnBreak": false,
+  "debug.showInStatusBar": "never",
+  "debug.showInlineBreakpointCandidates": false,
+  "material-icon-theme.activeIconPack": "react",
+
+  "material-icon-theme.folders.associations": {
+    "domain": "Job",
+    "context": "Controller",
+    "repositories": "Packages",
+    "usecases": "Resource",
+    "protocols": "Tools",
+    "requirements": "Tasks",
+    "authentication": "Archive",
+    "csv": "Images"
+  },
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "Dobri Next -A05- Jaguar",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "workbench.iconTheme": "material-icon-theme"
+}
