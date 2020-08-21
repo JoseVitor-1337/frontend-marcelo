@@ -52,6 +52,8 @@ const ParticipantForm = () => {
       .then((response) => {
         const UFacronyms = response.data.map((state) => state.sigla);
 
+        console.log(UFacronyms);
+
         setStates(UFacronyms);
       });
   }, []);
@@ -114,12 +116,14 @@ const ParticipantForm = () => {
 
           <div className="form-select-group">
             <Select
+              name="schooling"
               options={schooling}
               value={selectedSchooling}
               setValue={setSelectedSchooling}
               label="Escolaridade"
             />
             <Select
+              name="univercityOrSchoolType"
               options={univercityOrSchoolType}
               value={selectedUnivercityType}
               setValue={setSelectedUnivercityType}
@@ -136,6 +140,7 @@ const ParticipantForm = () => {
               label="Idade"
             />
             <Select
+              name="sex"
               options={sex}
               value={selectedSex}
               setValue={setSelectedSex}
@@ -146,12 +151,14 @@ const ParticipantForm = () => {
 
         <div className="second-form-group">
           <Select
+            name="ethnicClassification"
             options={ethnicClassification}
             value={selectedEthnicType}
             setValue={setSelectedEthnicType}
             label="Classificação éticno-racial"
           />
           <Select
+            name="state"
             options={states}
             value={selectedState}
             setValue={setSelectedState}

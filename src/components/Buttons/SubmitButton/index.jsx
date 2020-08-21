@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 import "./style.css";
 
@@ -9,4 +9,5 @@ const SubmitButton = (props) => {
     </button>
   );
 };
-export { SubmitButton };
+
+export default memo(SubmitButton);

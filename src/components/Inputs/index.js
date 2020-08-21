@@ -1,3 +1,5 @@
-export * from "./PasswordInput";
-export * from "./TextInput";
-export * from "./CheckBoxInput";
+import PasswordInput from "./PasswordInput";
+import TextInput from "./TextInput";
+import CheckBoxInput from "./CheckBoxInput";
+
+export { PasswordInput, TextInput, CheckBoxInput };

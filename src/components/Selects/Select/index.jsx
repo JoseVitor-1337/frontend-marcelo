@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 import "./style.css";
 
@@ -27,4 +27,4 @@ const Select = ({ name, value, setValue, label, options }) => {
   );
 };
 
-export { Select };
+export default memo(Select);

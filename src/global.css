@@ -109,12 +109,12 @@ label {
 
 @media only screen and (max-width: 400px) {
   :root {
-    font-size: 55%;
+    font-size: 50%;
   }
 }
 
 @media only screen and (max-width: 320px) {
   :root {
-    font-size: 45%;
+    font-size: 40%;
   }
 }

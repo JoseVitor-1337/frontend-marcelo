@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 import "./style.css";
 
@@ -40,4 +40,4 @@ const TextInput = (props) => {
   );
 };
 
-export { TextInput };
+export default memo(TextInput);

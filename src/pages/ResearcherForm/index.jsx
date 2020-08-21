@@ -89,12 +89,14 @@ const ResearcherForm = () => {
 
           <div className="form-select-group">
             <Select
+              name="schooling"
               options={schooling}
               value={selectedSchooling}
               setValue={setSelectedSchooling}
               label="Escolaridade"
             />
             <Select
+              name="univercityOrSchoolType"
               options={univercityOrSchoolType}
               value={selectedUnivercityType}
               setValue={setSelectedUnivercityType}
@@ -121,6 +123,7 @@ const ResearcherForm = () => {
 
         <div className="second-form-group">
           <Select
+            name="state"
             options={states}
             value={selectedState}
             setValue={setSelectedState}

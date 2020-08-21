@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import passwordVisibleIcon from "../../../assets/icons/password-visible.svg";
 import passwordHiddenIcon from "../../../assets/icons/password-hidden.svg";
 import "./style.css";
@@ -9,7 +9,7 @@ const PasswordInput = ({ label, name, value, setValue, password }) => {
     type: "password",
   });
 
-  function changePasswordVisibilit() {
+  function changePasswordVisibility() {
     if (passwordIcon.icon === passwordHiddenIcon) {
       setPasswordIcon({
         icon: passwordVisibleIcon,
@@ -25,8 +25,10 @@ const PasswordInput = ({ label, name, value, setValue, password }) => {
 
   function passwordIsEqualToConfirmPassword() {
     if (password === undefined) {
-      return;
+      return null;
     }
+
+    console.log("Password is not undefine");
 
     const spans = document.getElementsByClassName("spans");
     const passwordInputs = document.getElementsByClassName("password");
@@ -69,7 +71,7 @@ const PasswordInput = ({ label, name, value, setValue, password }) => {
         required
       />
       <img
-        onClick={changePasswordVisibilit}
+        onClick={changePasswordVisibility}
         className="password-icon"
         src={icon}
         alt="Icon"
@@ -78,4 +80,4 @@ const PasswordInput = ({ label, name, value, setValue, password }) => {
   );
 };
 
-export { PasswordInput };
+export default memo(PasswordInput);

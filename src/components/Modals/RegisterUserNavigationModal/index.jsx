@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { NavigationButton } from "../../Buttons";
 import { useHistory } from "react-router-dom";
 import "./style.css";
@@ -45,4 +45,4 @@ const RegisterUserNavigationModal = ({ closeModal }) => {
   );
 };
 
-export { RegisterUserNavigationModal };
+export default memo(RegisterUserNavigationModal);

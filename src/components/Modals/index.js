@@ -1,1 +1,3 @@
-export * from "./RegisterUserNavigationModal";
+import RegisterUserNavigationModal from "./RegisterUserNavigationModal";
+
+export { RegisterUserNavigationModal };
