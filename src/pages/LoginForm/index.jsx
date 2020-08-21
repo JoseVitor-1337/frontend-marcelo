@@ -29,7 +29,7 @@ const LoginForm = () => {
   return (
     <>
       {modalOpen === false ? (
-        <div onSubmit={logIn} autoComplete="Off" className="login-form">
+        <div autoComplete="Off" className="login-form">
           <header>
             <h2>Experimentos & Pesquisas</h2>
           </header>

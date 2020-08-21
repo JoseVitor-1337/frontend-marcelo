@@ -3,7 +3,7 @@ button.navigation {
   text-transform: uppercase;
   color: var(--text-secondary-color);
   background-color: var(--primary-color);
-  padding: 0.4rem;
+  padding: 0.5rem;
   border-radius: 0.8rem;
   width: 100%;
   font-weight: 700;

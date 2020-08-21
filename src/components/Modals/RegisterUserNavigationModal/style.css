@@ -44,4 +44,6 @@ div.modal-header h2 {
 div.modal-body {
   width: 100%;
   z-index: 1;
+
+  display: flex;
 }
