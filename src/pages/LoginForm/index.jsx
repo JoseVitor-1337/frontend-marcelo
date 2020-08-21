@@ -20,7 +20,10 @@ const LoginForm = () => {
   }
 
   function logIn() {
-    alert("Login");
+    console.log({
+      email,
+      password,
+    });
   }
 
   return (

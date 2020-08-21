@@ -17,15 +17,15 @@ div.register-container header h2 {
 }
 
 div.register-container header .go-back {
-  width: 50%;
+  width: 30%;
   margin-left: auto;
-
   display: flex;
   justify-content: flex-end;
 }
 
 div.register-container form {
   background-color: var(--secondary-color);
+
   display: grid;
   grid-template-rows: 90% 10%;
   grid-template-columns: 50% 50%;
@@ -66,13 +66,5 @@ form div.submit {
   div.register-container form {
     background-color: var(--secondary-color);
     display: block;
-  }
-
-  button.submit {
-    width: 100%;
-  }
-
-  button.navigation {
-    width: 75%;
   }
 } */

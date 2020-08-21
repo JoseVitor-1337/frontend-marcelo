@@ -24,6 +24,10 @@ const PasswordInput = ({ label, name, value, setValue, password }) => {
   }
 
   function passwordIsEqualToConfirmPassword() {
+    if (password === undefined) {
+      return;
+    }
+
     const spans = document.getElementsByClassName("spans");
     const passwordInputs = document.getElementsByClassName("password");
 
