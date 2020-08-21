@@ -2,7 +2,7 @@ div.login-form {
   margin-top: 5rem;
   position: relative;
   background-color: var(--secondary-color);
-  min-width: 32rem;
+  min-width: 35rem;
   padding: 0.4rem 0.5rem;
   border-radius: 0.4rem;
 
@@ -33,4 +33,11 @@ div.login-form .buttons {
   width: 100%;
   margin-top: 1.5rem;
   display: flex;
+}
+
+@media only screen and (max-width: 450px) {
+  div.login-form {
+    margin-top: 10rem;
+    padding: 1rem;
+  }
 }

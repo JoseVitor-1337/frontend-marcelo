@@ -42,6 +42,7 @@ const LoginForm = () => {
           <PasswordInput
             value={password}
             setValue={setPassword}
+            name="password"
             label="Senha"
           />
           <CheckBoxInput label="Manter-se conectado" />

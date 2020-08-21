@@ -14,10 +14,10 @@ div.input-group input {
   outline: none;
   padding: 0.45rem 0.3rem;
   margin: 0;
-  border: 1.5px solid var(--shadow-color);
+
   transition: border 0.5s;
 }
 
 div.input-group input:focus {
-  border: 1.5px solid var(--primary-color);
+  border-color: 1.5px solid var(--primary-color);
 }

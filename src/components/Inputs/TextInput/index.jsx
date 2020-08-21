@@ -13,10 +13,10 @@ const TextInput = (props) => {
 
     if (hasMatch !== null) {
       span.style.display = "none";
-      input.style.border = "1.5px solid var(--shadow-color)";
+      input.style.borderColor = "var(--shadow-color)";
     } else {
       span.style.display = "inline";
-      input.style.border = "1.5px solid var(--text-error-color)";
+      input.style.borderColor = "var(--text-error-color)";
     }
   }
 

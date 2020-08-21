@@ -17,5 +17,5 @@ img.password-icon {
 }
 
 .input-error {
-  border: 1.5px solid var(--text-error-color) !important;
+  border-color: var(--text-error-color) !important;
 }

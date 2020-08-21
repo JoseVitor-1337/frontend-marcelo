@@ -180,7 +180,7 @@ const ParticipantForm = () => {
           />
         </div>
 
-        <div className="submit">
+        <div className="submit participant-submit">
           <SubmitButton title="Cadastrar-se" />
         </div>
       </form>

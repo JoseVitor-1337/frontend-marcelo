@@ -110,12 +110,6 @@ const ResearcherForm = () => {
             label="Idade"
           />
 
-          <div className="submit">
-            <SubmitButton title="Cadastrar-se" />
-          </div>
-        </div>
-
-        <div className="second-form-group">
           <TextInput
             value={cpf}
             setValue={setCpf}
@@ -123,6 +117,9 @@ const ResearcherForm = () => {
             name="cpf"
             label="CPF"
           />
+        </div>
+
+        <div className="second-form-group">
           <Select
             options={states}
             value={selectedState}
@@ -150,6 +147,10 @@ const ResearcherForm = () => {
             name="confirmPasswrod"
             label="Confirmar Senha"
           />
+
+          <div className="submit researcher-submit">
+            <SubmitButton title="Cadastrar-se" />
+          </div>
         </div>
       </form>
     </div>
