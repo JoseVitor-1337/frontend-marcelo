@@ -4,8 +4,10 @@ import { BrowserRouter, Switch } from "react-router-dom";
 import LoginForm from "./pages/LoginForm";
 import ParticipantForm from "./pages/ParticipantForm";
 import ResearcherForm from "./pages/ResearcherForm";
+import AdministerHome from "./pages/AdministerHome";
 
 import PublicRouter from "./routes/PublicRouter";
+import AdministerRouter from "./routes/AdministerRouter";
 
 const Routes = () => {
   return (
@@ -17,6 +19,7 @@ const Routes = () => {
           path="/register/participant"
           component={ParticipantForm}
         />
+        <AdministerRouter path="/administer/home" component={AdministerHome} />
       </Switch>
     </BrowserRouter>
   );

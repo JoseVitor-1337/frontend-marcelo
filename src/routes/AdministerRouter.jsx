@@ -6,9 +6,9 @@ const AdminsiterRoutes = ({ path, exact, component }) => {
   const userType = localStorage.getItem("userType");
 
   useEffect(() => {
-    if (userType !== "administer") {
-      navigation.goBack();
-    }
+    // if (userType !== "administer") {
+    //   navigation.goBack();
+    // }
   }, [navigation, userType]);
 
   return <Route exact={exact} path={path} component={component} />;
