@@ -1,15 +1,12 @@
 div.register-container {
-  border: 2px solid var(--secondary-color);
+  border: 1.5px solid var(--secondary-color);
   width: 60rem;
+  margin-top: 1rem;
   display: grid;
-  grid-template-rows: 10%;
-  grid-template-areas: "header", "form";
 }
 
 div.register-container header {
-  background-color: var(--primary-color);
   padding: 0.5rem 1rem;
-
   display: flex;
   align-items: center;
 }
@@ -19,17 +16,24 @@ div.register-container header h2 {
   font-size: 2rem;
 }
 
+div.register-container header .go-back {
+  width: 50%;
+  margin-left: auto;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
 div.register-container form {
   background-color: var(--secondary-color);
   display: grid;
-  grid-template-rows: 8fr 1fr;
-  grid-template-columns: 3fr 3fr;
-  grid-template-areas:
-    "first second"
-    "submit submit";
+  grid-template-rows: 90% 10%;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "first second" "submit submit";
 }
 
 form div.first-form-group {
+  margin-top: 0.5rem;
   grid-area: first;
   padding: 0.2rem 0.4rem;
 }
@@ -41,14 +45,34 @@ form div.first-form-group {
 }
 
 form div.second-form-group {
+  margin-top: 0.5rem;
   grid-area: second;
   padding: 0.2rem 0.4rem;
 }
 
 form div.submit {
   grid-area: submit;
-
   display: flex;
   align-items: center;
   padding: 0.2rem 0.4rem;
 }
+
+/* @media (min-width: 750px) {
+  div.register-container {
+    margin-top: 2rem;
+    width: 30rem;
+  }
+
+  div.register-container form {
+    background-color: var(--secondary-color);
+    display: block;
+  }
+
+  button.submit {
+    width: 100%;
+  }
+
+  button.navigation {
+    width: 75%;
+  }
+} */

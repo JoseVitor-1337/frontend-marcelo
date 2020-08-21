@@ -2,7 +2,7 @@ div.select-group {
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
 }
 
 div.select-group label {
@@ -10,10 +10,9 @@ div.select-group label {
 }
 
 div.select-group select {
-  font-size: 1rem;
   width: 100%;
   outline: none;
-  padding: 0.43rem 0.3rem;
+  padding: 0.42rem 0.3rem;
   border: 1.5px solid var(--shadow-color);
   transition: border 0.5s;
 }

@@ -11,3 +11,11 @@ img.password-icon {
 
   cursor: pointer;
 }
+
+.span-error {
+  display: inline !important;
+}
+
+.input-error {
+  border: 1.5px solid var(--text-error-color) !important;
+}

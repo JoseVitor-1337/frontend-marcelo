@@ -8,7 +8,7 @@
   --shadow-color: rgba(0, 0, 0, 0.25);
   --secondary-color: #ffffff;
 
-  font-size: 80%;
+  font-size: 90%;
 }
 
 * {
@@ -16,6 +16,12 @@
   padding: 0;
   box-sizing: border-box;
   outline: none;
+}
+
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h1,
@@ -27,21 +33,13 @@ h2 {
 
 body {
   display: flex;
-  align-items: center;
   justify-content: center;
   background-color: var(--primary-color);
 }
 
 input,
-span,
-p {
-  font-size: 1rem;
-  font-weight: 500;
-}
-
 button {
-  outline: none;
-  border: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 label {
@@ -51,9 +49,49 @@ label {
   margin-bottom: 0.4rem;
   cursor: pointer;
 }
+
+input {
+  font-weight: 500;
+}
+
+button {
+  outline: none;
+  border: 0;
+  font-weight: 700;
+}
+
+p {
+  font-weight: 500;
+}
+
+span {
+  font-size: 1rem;
+}
+
+select {
+  font-weight: normal;
+}
+
 span,
-button,
 label {
   font-family: "Rasa", serif;
-  font-weight: 500;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  :root {
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 800px) {
+  :root {
+    font-size: 70%;
+  }
+}
+
+@media (max-width: 700px) {
+  :root {
+    font-size: 60%;
+  }
 }

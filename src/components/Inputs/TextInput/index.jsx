@@ -9,13 +9,11 @@ const TextInput = (props) => {
     const span = document.getElementById(`message-${name}`);
     const input = document.getElementById(event.target.id);
 
-    const { value } = event.target;
-
     const hasMatch = value.match(pattern);
 
     if (hasMatch !== null) {
       span.style.display = "none";
-      input.style.border = "1.5px solid var(--text-correct-color)";
+      input.style.border = "1.5px solid var(--shadow-color)";
     } else {
       span.style.display = "inline";
       input.style.border = "1.5px solid var(--text-error-color)";

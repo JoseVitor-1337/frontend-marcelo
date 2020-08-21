@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { SubmitButton } from "../../components/Buttons";
+import { useHistory } from "react-router-dom";
+import { SubmitButton, NavigationButton } from "../../components/Buttons";
 import { TextInput, PasswordInput } from "../../components/Inputs";
 import { Select } from "../../components/Selects";
 import axios from "axios";
 import "./style.css";
 
 const ParticipantForm = () => {
+  const navigation = useHistory();
+
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
   const [univercityName, setUnivercityName] = useState("");
@@ -53,7 +56,13 @@ const ParticipantForm = () => {
       });
   }, []);
 
-  function registerNewParticipant() {
+  function goBackToLoginPage() {
+    navigation.push("/");
+  }
+
+  function registerNewParticipant(event) {
+    event.preventDefault();
+
     console.log({
       name,
       age,
@@ -72,8 +81,14 @@ const ParticipantForm = () => {
     <div className="register-container">
       <header>
         <h2>Participante</h2>
+        <div className="go-back">
+          <NavigationButton
+            action={goBackToLoginPage}
+            title="Voltar ao Login"
+          />
+        </div>
       </header>
-      <form autoComplete="Off">
+      <form onSubmit={registerNewParticipant} autoComplete="Off">
         <div className="first-form-group">
           <TextInput
             type="name"
@@ -86,7 +101,7 @@ const ParticipantForm = () => {
             value={univercityName}
             setValue={setUnivercityName}
             pattern="^[a-zA-Z][^0-9]{4,}$"
-            type="univercityOrSchoolName"
+            name="univercityOrSchoolName"
             label="Univercidade ou escola"
           />
           <TextInput
@@ -115,7 +130,7 @@ const ParticipantForm = () => {
           <div className="form-select-group">
             <TextInput
               name="age"
-              pattern="^[1-9]{1}[1-9]{0,1}$"
+              pattern="^[1-9]{1}[0-9]{0,1}$"
               value={age}
               setValue={setAge}
               label="Idade"
@@ -152,6 +167,7 @@ const ParticipantForm = () => {
           <PasswordInput
             value={password}
             setValue={setPassword}
+            password={confirmPassword}
             name="password"
             label="Senha"
           />

@@ -10,6 +10,8 @@ import "./style.css";
 
 const LoginForm = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   function openRegisterUserNavigationModal() {
     if (modalOpen === false) {
@@ -28,8 +30,17 @@ const LoginForm = () => {
           <header>
             <h2>Experimentos & Pesquisas</h2>
           </header>
-          <TextInput type="email" label="Login" />
-          <PasswordInput label="Senha" />
+          <TextInput
+            value={email}
+            setValue={setEmail}
+            name="email"
+            label="Login"
+          />
+          <PasswordInput
+            value={password}
+            setValue={setPassword}
+            label="Senha"
+          />
           <CheckBoxInput label="Manter-se conectado" />
           <div className="buttons">
             <SubmitButton action={logIn} title="Login" />

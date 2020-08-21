@@ -5,11 +5,12 @@ button.navigation {
   background-color: var(--primary-color);
   padding: 0.4rem;
   border-radius: 0.8rem;
-  width: 49%;
+  width: 45%;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1rem;
   cursor: pointer;
   transition: 0.5s;
+  border: 1.5px solid var(--secondary-color);
 }
 
 button.navigation + button.navigation {
