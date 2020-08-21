@@ -19,5 +19,5 @@ div.input-group input {
 }
 
 div.input-group input:focus {
-  border-color: 1.5px solid var(--primary-color);
+  border: 0.1rem solid var(--primary-color) !important;
 }

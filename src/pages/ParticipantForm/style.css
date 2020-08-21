@@ -78,7 +78,10 @@ form div.participant-submit {
 
 @media only screen and (max-width: 450px) {
   div.register-container {
-    margin-top: 5rem;
-    min-width: 40rem;
+    min-width: 30rem;
+  }
+
+  div.register-container header .go-back {
+    width: 50%;
   }
 }

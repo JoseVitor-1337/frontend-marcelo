@@ -17,10 +17,6 @@ div.navigation-item a {
   font-weight: 550;
 }
 
-div.navigation-item:hover * {
-  color: var(--text-secondary-color);
-}
-
 div.navigation-item:hover {
   background-color: var(--primary-color);
 }
