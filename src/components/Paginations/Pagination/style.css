@@ -35,8 +35,8 @@ ul.pagination li {
 }
 
 .active {
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
+  background-color: var(--secondary-color) !important;
+  color: var(--primary-color) !important;
 }
 
 ul.pagination li:hover {

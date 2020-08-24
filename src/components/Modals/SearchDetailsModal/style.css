@@ -2,8 +2,9 @@ div.search-details-modal {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 
-  margin-top: 2rem;
+  margin: 2rem auto;
 }
 
 div.search-details-modal header {
@@ -23,25 +24,29 @@ div.search-details-modal img.close-icon {
 div.search-details-modal header img {
   width: 7rem;
   height: 7rem;
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 
 div.search-details-modal header .description {
   padding: 1rem;
+  text-align: left;
 }
 
 div.search-details-modal header .description h2 {
   font-size: 2.2rem;
   color: var(--text-primary-color);
   font-weight: 700;
-  text-align: left;
 }
 
 div.search-details-modal header .description span {
   font-size: 1.2rem;
   color: var(--text-primary-color);
   font-weight: 400;
-  text-align: left;
+}
+
+div.search-details-modal div.modal-body {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 div.search-details-modal div.researcher-details {
@@ -109,4 +114,33 @@ div.search-details div.search-info span {
   font-size: 1.2rem;
   font-weight: 500;
   color: var(--text-primary-color);
+}
+
+@media only screen and (max-width: 850px) {
+  div.search-details-modal {
+    width: 95%;
+    margin: 3rem auto;
+  }
+
+  div.search-details-modal div.modal-body {
+    align-items: center;
+    justify-content: center;
+  }
+
+  div.researcher-details {
+    margin-right: 0;
+  }
+
+  div.search-details,
+  div.researcher-details {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  div.search-details,
+  div.researcher-details {
+    width: 100%;
+    margin-right: 0 !important;
+  }
 }

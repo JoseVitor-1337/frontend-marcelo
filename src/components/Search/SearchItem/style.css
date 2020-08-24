@@ -1,7 +1,8 @@
 div.search-item {
-  width: 32%;
+  width: 31.5%;
   background-color: white;
   margin: 0.5rem;
+  margin-right: auto;
 
   padding: 0.5rem;
   border-radius: 0.8rem;
@@ -66,8 +67,8 @@ div.search-item div.content div.details {
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 650px) {
   div.search-item {
-    width: 90%;
+    width: 95%;
   }
 }

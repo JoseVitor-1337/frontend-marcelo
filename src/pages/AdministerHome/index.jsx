@@ -41,9 +41,8 @@ const AdministerHome = () => {
             <SearchItem openDetailModal={openSearchDetailsModal} />
             <SearchItem openDetailModal={openSearchDetailsModal} />
             <SearchItem openDetailModal={openSearchDetailsModal} />
-            <SearchItem openDetailModal={openSearchDetailsModal} />
           </div>
-          <Pagination maxItems={40} itemsPerPage={4} />
+          <Pagination maxItems={21} itemsPerPage={4} />
         </>
       ) : (
         <SearchDetailsModal closeModal={setSearchDetailModalIsOpent} />
