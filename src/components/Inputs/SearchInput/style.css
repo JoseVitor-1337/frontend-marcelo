@@ -1,0 +1,19 @@
+div.search-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem;
+  margin: 0;
+  border: 0;
+}
+
+div.search-group input {
+  border: 0.1rem solid var(--shadow-color);
+  border-radius: 1rem;
+  padding: 0.6rem 0.8rem;
+  transition: all 0.5s;
+}
+
+div.search-group input:focus {
+  border: 0.1rem solid var(--text-primary-color) !important;
+}

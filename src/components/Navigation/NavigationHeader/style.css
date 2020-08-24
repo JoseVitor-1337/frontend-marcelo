@@ -9,3 +9,37 @@ nav {
 
   box-shadow: 1px 1px 1px 1px var(--shadow-color);
 }
+
+nav a {
+  display: inline-block;
+  height: 3rem;
+  width: 10%;
+  text-decoration: none;
+  color: var(--text-primrary-color);
+  font-size: 1.1rem;
+  font-weight: 550;
+
+  cursor: pointer;
+  color: var(--text-primary-color);
+  transition: all 0.5s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav a:hover {
+  color: var(--text-secondary-color);
+  background-color: var(--primary-color);
+}
+
+@media only screen and (max-width: 450px) {
+  nav,
+  nav a {
+    height: 4rem;
+  }
+
+  nav a {
+    width: 20%;
+  }
+}

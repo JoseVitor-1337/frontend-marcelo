@@ -9,13 +9,13 @@ import { SubmitButton } from "../../components/Buttons";
 import "./style.css";
 
 const LoginForm = () => {
-  const [modalOpen, setModalOpen] = useState(false);
+  const [registerModalIsOpen, setRegisterModalIsOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   function openRegisterUserNavigationModal() {
-    if (modalOpen === false) {
-      setModalOpen(true);
+    if (registerModalIsOpen === false) {
+      setRegisterModalIsOpen(true);
     }
   }
 
@@ -28,7 +28,7 @@ const LoginForm = () => {
 
   return (
     <>
-      {modalOpen === false ? (
+      {registerModalIsOpen === false ? (
         <div autoComplete="Off" className="login-form">
           <header>
             <h2>Experimentos & Pesquisas</h2>
@@ -55,7 +55,7 @@ const LoginForm = () => {
           </div>
         </div>
       ) : (
-        <RegisterUserNavigationModal closeModal={setModalOpen} />
+        <RegisterUserNavigationModal closeModal={setRegisterModalIsOpen} />
       )}
     </>
   );

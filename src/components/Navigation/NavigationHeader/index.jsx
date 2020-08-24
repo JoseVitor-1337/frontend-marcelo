@@ -1,13 +1,20 @@
 import React, { memo } from "react";
-import { NavigationItem } from "../";
+import { Link } from "react-router-dom";
 import "./style.css";
 
-const NavigationHeader = () => {
+const NavigationHeader = (props) => {
+  const { items } = props;
   return (
     <nav>
-      <NavigationItem title="Sair" />
-      <NavigationItem title="Outro nome" />
-      <NavigationItem title="Alo Você" />
+      {items.map((item) => {
+        const { to, title } = item;
+
+        return (
+          <Link key={to} to={to} href="/">
+            {title}
+          </Link>
+        );
+      })}
     </nav>
   );
 };
