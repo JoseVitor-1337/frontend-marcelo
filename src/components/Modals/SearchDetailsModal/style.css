@@ -1,0 +1,112 @@
+div.search-details-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 2rem;
+}
+
+div.search-details-modal header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+div.search-details-modal img.close-icon {
+  width: 3rem;
+  height: 3rem;
+
+  top: -1.2rem;
+  right: -1.2rem;
+}
+
+div.search-details-modal header img {
+  width: 7rem;
+  height: 7rem;
+  margin-right: 2rem;
+}
+
+div.search-details-modal header .description {
+  padding: 1rem;
+}
+
+div.search-details-modal header .description h2 {
+  font-size: 2.2rem;
+  color: var(--text-primary-color);
+  font-weight: 700;
+  text-align: left;
+}
+
+div.search-details-modal header .description span {
+  font-size: 1.2rem;
+  color: var(--text-primary-color);
+  font-weight: 400;
+  text-align: left;
+}
+
+div.search-details-modal div.researcher-details {
+  background-color: var(--primary-color);
+  padding: 0.8rem;
+  border-radius: 1rem;
+  margin-right: 1.5rem;
+}
+
+div.search-details-modal div.researcher-details h3 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--text-secondary-color);
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+div.researcher-details p {
+  text-align: justify;
+  font-size: 1.2rem;
+  color: var(--text-secondary-color);
+  margin-bottom: 1.6rem;
+}
+
+div.search-details {
+  border-radius: 1rem;
+  padding: 0 0.5rem;
+
+  width: 20rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+div.search-details div.search-info {
+  width: 8rem;
+  padding: 1.2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+div.search-details div.search-info div.circle {
+  background-color: var(--primary-color);
+  padding: 1.5rem;
+  width: 6.5rem;
+  height: 6.5rem;
+  border-radius: 100%;
+  margin-bottom: 0.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.search-details div.search-info div.circle h2 {
+  font-size: 2rem;
+  color: var(--text-secondary-color);
+}
+
+div.search-details div.search-info span {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-primary-color);
+}

@@ -17,7 +17,7 @@ const RegisterUserNavigationModal = ({ closeModal }) => {
   }
 
   return (
-    <div className="modal">
+    <div className="register-modal">
       <div className="modal-content">
         <img
           onClick={() => closeModal(false)}

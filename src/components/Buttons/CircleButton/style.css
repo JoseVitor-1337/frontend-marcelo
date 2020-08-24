@@ -6,7 +6,6 @@ button.circle {
   padding: 1.5rem;
   border-radius: 100%;
   width: 80%;
-  font-weight: 600;
   font-size: 0.7rem;
   cursor: pointer;
   transition: 0.5s;

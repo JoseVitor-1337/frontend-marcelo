@@ -18,7 +18,7 @@ div.modal-content {
   z-index: 1;
 }
 
-div.modal-content img {
+div.modal-content img.close-icon {
   width: 2.4rem;
   height: 2.4rem;
   position: absolute;
@@ -30,7 +30,7 @@ div.modal-content img {
   fill: red;
 }
 
-div.modal-content img:hover {
+div.modal-content img.close-icon:hover {
   filter: brightness(0.9);
 }
 

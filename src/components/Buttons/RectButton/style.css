@@ -1,0 +1,19 @@
+button.rect {
+  padding: 1rem;
+  width: 100%;
+  background-color: var(--primary-color);
+  font-size: 1rem;
+  color: var(--text-secondary-color);
+  border: 0.1rem solid var(--secondary-color);
+  border-radius: 0.8rem;
+  margin: 0.5rem 0;
+
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+button.rect:hover {
+  background-color: var(--text-secondary-color);
+  color: var(--primary-color);
+  border: 0.1rem solid var(--primary-color);
+}
