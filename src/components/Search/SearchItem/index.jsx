@@ -17,7 +17,6 @@ const SearchItem = (props) => {
       </header>
       <div className="content">
         <div className="researcher-info">
-          <h3>Pesquisador</h3>
           <p>Professor(a): Wender Silva</p>
           <p>Curso: Ciências da computação</p>
           <p>Escolaridade: Pós-doutorado</p>

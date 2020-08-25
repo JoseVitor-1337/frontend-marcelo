@@ -15,12 +15,12 @@ nav a {
   height: 3rem;
   width: 10%;
   text-decoration: none;
-  color: var(--text-primrary-color);
+  color: var(--primrary-color);
   font-size: 1.1rem;
   font-weight: 550;
 
   cursor: pointer;
-  color: var(--text-primary-color);
+  color: var(--primary-color);
   transition: all 0.5s;
 
   display: flex;

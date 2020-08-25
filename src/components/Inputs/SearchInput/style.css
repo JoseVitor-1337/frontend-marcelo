@@ -15,5 +15,5 @@ div.search-group input {
 }
 
 div.search-group input:focus {
-  border: 0.1rem solid var(--text-primary-color) !important;
+  border: 0.1rem solid var(--primary-color) !important;
 }
