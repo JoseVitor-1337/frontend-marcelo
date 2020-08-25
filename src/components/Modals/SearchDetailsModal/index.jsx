@@ -1,14 +1,11 @@
 import React, { memo } from "react";
 import { RectButton } from "../../Buttons";
-import { useHistory } from "react-router-dom";
 import searchSVG from "../../../assets/icons/search.svg";
 import "./style.css";
 
 import closeIcon from "../../../assets/icons/close.svg";
 
 const SearchDetailsModal = ({ closeModal }) => {
-  const navigation = useHistory();
-
   return (
     <div className="search-details-modal">
       <div className="modal-content">

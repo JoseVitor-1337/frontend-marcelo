@@ -24,24 +24,54 @@ const Pagination = (props) => {
   }
 
   useEffect(() => {
-    if (numberOfPages.length > 5) {
+    let count = 0;
+    let index = 0;
+    const sizeOfPages = numberOfPages.length;
+    const newChoosePages = [currentPage];
+
+    if (sizeOfPages > 5) {
+      do {
+        if (count > 0) {
+          count = count * -1;
+        } else {
+          count = count * -1;
+          count++;
+        }
+
+        const pageIndex = currentPage - 1 + count;
+        const hasPage = numberOfPages[pageIndex];
+
+        if (newChoosePages.length < 5) {
+          if (hasPage === 0) {
+            console.log(currentPage, count, pageIndex, hasPage);
+            if (count > 0) {
+              newChoosePages.push(currentPage + count);
+            } else {
+              newChoosePages.unshift(currentPage + count);
+            }
+          }
+        }
+
+        index++;
+      } while (index < 15);
+
+      console.log(newChoosePages);
+      setChoosePages(newChoosePages);
     } else {
       setChoosePages(numberOfPages);
     }
-  }, [numberOfPages]);
+  }, [currentPage, numberOfPages]);
 
   return (
     <ul className="pagination">
       {choosePages.map((item, index) => {
-        const page = index + 1;
-
         return (
           <li
-            onClick={() => setCurrentPage(page)}
+            onClick={() => setCurrentPage(item)}
             key={index}
-            className={`${currentPage === page ? "active" : ""}`}
+            className={`${currentPage === item ? "active" : ""}`}
           >
-            {page}
+            {item}
           </li>
         );
       })}
