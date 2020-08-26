@@ -6,8 +6,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-
-  box-shadow: 1px 1px 1px 1px var(--shadow-color);
 }
 
 nav a {
@@ -15,12 +13,12 @@ nav a {
   height: 3rem;
   width: 10%;
   text-decoration: none;
-  color: var(--primrary-color);
+  border-left: 0.01rem solid var(--primary-color);
+  color: var(--primary-color);
   font-size: 1.1rem;
   font-weight: 550;
 
   cursor: pointer;
-  color: var(--primary-color);
   transition: all 0.5s;
 
   display: flex;
@@ -36,10 +34,10 @@ nav a:hover {
 @media only screen and (max-width: 450px) {
   nav,
   nav a {
-    height: 4rem;
+    height: 3rem;
   }
 
   nav a {
-    width: 20%;
+    width: 34%;
   }
 }

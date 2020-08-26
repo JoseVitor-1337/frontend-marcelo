@@ -2,23 +2,25 @@ import React, { useState } from "react";
 import { NavigationHeader } from "../../components/Navigation";
 import { SearchInput } from "../../components/Inputs";
 import { Pagination } from "../../components/Paginations";
-import { AdministerSearchItem } from "../../components/Search";
+import { ParticipantPendentSearchItem } from "../../components/Search";
 import { SearchDetailsModal } from "../../components/Modals";
 import "./style.css";
 
-const AdministerHome = () => {
+const ParticipantCompletSearchs = () => {
   const [filter, setFilter] = useState(``);
   const [searchDetailModalIsOpent, setSearchDetailModalIsOpent] = useState(
     false
   );
 
-  function openSearchDetailsModal() {
-    if (searchDetailModalIsOpent === false) {
-      setSearchDetailModalIsOpent(true);
-    }
-  }
-
   const navigationItems = [
+    {
+      to: "/participant/searchs",
+      title: "Pendentes",
+    },
+    {
+      to: "/participant/complet_searchs",
+      title: "Concluídas",
+    },
     {
       to: "/",
       title: "Sair",
@@ -36,12 +38,7 @@ const AdministerHome = () => {
             value={filter}
             setValue={setFilter}
           />
-          <div className="searchs-item-container">
-            <AdministerSearchItem openDetailModal={openSearchDetailsModal} />
-            <AdministerSearchItem openDetailModal={openSearchDetailsModal} />
-            <AdministerSearchItem openDetailModal={openSearchDetailsModal} />
-            <AdministerSearchItem openDetailModal={openSearchDetailsModal} />
-          </div>
+          <div className=" searchs-item-container"></div>
           <Pagination maxItems={40} itemsPerPage={4} />
         </>
       ) : (
@@ -51,4 +48,4 @@ const AdministerHome = () => {
   );
 };
 
-export default AdministerHome;
+export default ParticipantCompletSearchs;

@@ -5,7 +5,8 @@ import LoginForm from "./pages/LoginForm";
 import ParticipantForm from "./pages/ParticipantForm";
 import ResearcherForm from "./pages/ResearcherForm";
 import AdministerHome from "./pages/AdministerHome";
-import ParticipantSearchs from "./pages/ParticipantSearchs";
+import ParticipantPendentSearchs from "./pages/ParticipantPendentSearchs";
+import ParticipantCompletSearchs from "./pages/ParticipantCompletSearchs";
 import ResearcherSearchs from "./pages/ResearcherSearchs";
 
 import PublicRouter from "./routes/PublicRouter";
@@ -24,14 +25,21 @@ const Routes = () => {
           component={ParticipantForm}
         />
         <ParticipantRouter
-          path="/participant/searchs"
-          component={ParticipantSearchs}
+          path="/participant/pendent_searchs"
+          component={ParticipantPendentSearchs}
+        />
+        <ParticipantRouter
+          path="/participant/complet_searchs"
+          component={ParticipantCompletSearchs}
         />
         <ResearcherRouter
           path="/researcher/searchs"
           component={ResearcherSearchs}
         />
-        <AdministerRouter path="/administer/home" component={AdministerHome} />
+        <AdministerRouter
+          path="/administer/searchs"
+          component={AdministerHome}
+        />
       </Switch>
     </BrowserRouter>
   );
