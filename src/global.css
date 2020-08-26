@@ -18,12 +18,6 @@
   outline: none;
 }
 
-.root {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 h1,
 h2 {
   margin: 0;
@@ -31,8 +25,10 @@ h2 {
   font-weight: bold;
 }
 
+html,
 body {
   display: flex;
+  align-items: center;
   justify-content: center;
   background-color: var(--primary-color);
 }
@@ -97,14 +93,8 @@ label {
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 350px) {
   :root {
     font-size: 70%;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  :root {
-    font-size: 60%;
   }
 }

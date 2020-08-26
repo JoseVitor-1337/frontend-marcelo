@@ -2,21 +2,15 @@ import React, { useState } from "react";
 import { NavigationHeader } from "../../components/Navigation";
 import { SearchInput } from "../../components/Inputs";
 import { Pagination } from "../../components/Paginations";
-import { SearchItem } from "../../components/Search";
+import {} from "../../components/Search";
 import { SearchDetailsModal } from "../../components/Modals";
 import "./style.css";
 
-const AdministerHome = () => {
+const ParticipantSearchs = () => {
   const [filter, setFilter] = useState(``);
   const [searchDetailModalIsOpent, setSearchDetailModalIsOpent] = useState(
     false
   );
-
-  function openSearchDetailsModal() {
-    if (searchDetailModalIsOpent === false) {
-      setSearchDetailModalIsOpent(true);
-    }
-  }
 
   const navigationItems = [
     {
@@ -36,12 +30,7 @@ const AdministerHome = () => {
             value={filter}
             setValue={setFilter}
           />
-          <div className="searchs-item-container">
-            <SearchItem openDetailModal={openSearchDetailsModal} />
-            <SearchItem openDetailModal={openSearchDetailsModal} />
-            <SearchItem openDetailModal={openSearchDetailsModal} />
-            <SearchItem openDetailModal={openSearchDetailsModal} />
-          </div>
+          <div className="searchs-item-container"></div>
           <Pagination maxItems={40} itemsPerPage={4} />
         </>
       ) : (
@@ -51,4 +40,4 @@ const AdministerHome = () => {
   );
 };
 
-export default AdministerHome;
+export default ParticipantSearchs;

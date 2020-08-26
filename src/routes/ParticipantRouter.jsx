@@ -6,9 +6,9 @@ const ParticipantRoutes = ({ path, exact, component }) => {
   const userType = localStorage.getItem("userType");
 
   useEffect(() => {
-    if (userType !== "participant") {
-      navigation.goBack();
-    }
+    // if (userType !== "participant") {
+    //   navigation.goBack();
+    // }
   }, [navigation, userType]);
 
   return <Route exact={exact} path={path} component={component} />;
