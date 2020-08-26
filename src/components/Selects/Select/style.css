@@ -13,6 +13,6 @@ div.select-group select {
   width: 100%;
   outline: none;
   padding: 0.42rem 0.3rem;
-
+  background-color: var(--secondary-color);
   transition: border 0.5s;
 }

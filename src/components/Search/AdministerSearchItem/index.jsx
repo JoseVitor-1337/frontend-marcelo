@@ -1,9 +1,9 @@
 import React, { memo } from "react";
-import { CircleButton } from "../../../components/Buttons";
+import { CircleButton } from "../../Buttons";
 import searchSVG from "../../../assets/icons/search.svg";
 import "./style.css";
 
-const SearchItem = (props) => {
+const AdministerSearchItem = (props) => {
   const { openDetailModal } = props;
 
   return (
@@ -29,4 +29,4 @@ const SearchItem = (props) => {
   );
 };
 
-export default memo(SearchItem);
+export default memo(AdministerSearchItem);

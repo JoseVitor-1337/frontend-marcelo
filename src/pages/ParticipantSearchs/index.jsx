@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavigationHeader } from "../../components/Navigation";
 import { SearchInput } from "../../components/Inputs";
 import { Pagination } from "../../components/Paginations";
-import { AdministerSearchItem } from "../../components/Search";
+import { SearchItem } from "../../components/Search";
 import { SearchDetailsModal } from "../../components/Modals";
 import "./style.css";
 
@@ -37,10 +37,10 @@ const AdministerHome = () => {
             setValue={setFilter}
           />
           <div className="searchs-item-container">
-            <AdministerSearchItem />
-            <AdministerSearchItem openDetailModal={openSearchDetailsModal} />
-            <AdministerSearchItem openDetailModal={openSearchDetailsModal} />
-            <AdministerSearchItem openDetailModal={openSearchDetailsModal} />
+            <SearchItem openDetailModal={openSearchDetailsModal} />
+            <SearchItem openDetailModal={openSearchDetailsModal} />
+            <SearchItem openDetailModal={openSearchDetailsModal} />
+            <SearchItem openDetailModal={openSearchDetailsModal} />
           </div>
           <Pagination maxItems={40} itemsPerPage={4} />
         </>

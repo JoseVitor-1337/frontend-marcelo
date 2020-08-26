@@ -1,3 +1,3 @@
-import SearchItem from "./SearchItem";
+import AdministerSearchItem from "./AdministerSearchItem";
 
-export { SearchItem };
+export { AdministerSearchItem };

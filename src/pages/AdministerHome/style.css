@@ -5,11 +5,5 @@ div.searchs-item-container {
   flex-wrap: wrap;
   padding: 0 1rem;
   align-items: center;
-  justify-content: center;
-}
-
-@media only screen and (max-width: 650px) {
-  div.searchs-item-container {
-    justify-content: center;
-  }
+  justify-content: space-between;
 }

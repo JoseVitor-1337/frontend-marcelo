@@ -1,10 +1,9 @@
 div.search-item {
-  width: 32%;
+  width: 45%;
   background-color: var(--primary-color);
-  margin: 0.8rem;
-  margin-right: auto;
-  border: 0.3rem solid var(--text-secondary-color);
+  margin: 0.8rem 0;
 
+  border: 0.3rem solid var(--text-secondary-color);
   border-radius: 1rem;
 
   display: flex;
@@ -49,7 +48,7 @@ div.search-item div.content {
 
 div.search-item div.researcher-info {
   width: 75%;
-  padding: 1rem;
+  padding: 0.8rem;
 
   color: var(--text-secondary-color);
 
