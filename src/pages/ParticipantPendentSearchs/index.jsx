@@ -14,7 +14,7 @@ const ParticipantPendentSearchs = () => {
 
   const navigationItems = [
     {
-      to: "/participant/searchs",
+      to: "/participant/pendent_searchs",
       title: "Pendentes",
     },
     {

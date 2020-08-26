@@ -43,7 +43,6 @@ const Pagination = (props) => {
 
         if (newChoosePages.length < 5) {
           if (hasPage === 0) {
-            console.log(currentPage, count, pageIndex, hasPage);
             if (count > 0) {
               newChoosePages.push(currentPage + count);
             } else {
@@ -55,7 +54,6 @@ const Pagination = (props) => {
         index++;
       } while (index < 15);
 
-      console.log(newChoosePages);
       setChoosePages(newChoosePages);
     } else {
       setChoosePages(numberOfPages);

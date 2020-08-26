@@ -3,7 +3,7 @@ import { RectButton } from "../../Buttons";
 import searchSVG from "../../../assets/icons/search.svg";
 import "./style.css";
 
-const ParticipantSearchItem = (props) => {
+const ParticipantPendentSearchItem = (props) => {
   return (
     <div className="participant-search search-item">
       <header>
@@ -13,11 +13,11 @@ const ParticipantSearchItem = (props) => {
           <span>Uma breve descrição sobre a pesquisa trabalhada</span>
         </div>
       </header>
-      <div className="content">
+      <div className="pendent-search-content content">
         <RectButton title="Iniciar sessão" />
       </div>
     </div>
   );
 };
 
-export default memo(ParticipantSearchItem);
+export default memo(ParticipantPendentSearchItem);

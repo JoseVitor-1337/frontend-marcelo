@@ -1,0 +1,41 @@
+div.complet-search-content {
+  padding: 1rem;
+}
+
+div.complet-search-content div.description {
+  color: var(--text-secondary-color);
+  width: 60%;
+  margin-right: 10%;
+  text-align: left;
+}
+
+div.complet-search-content div.description h3 {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+div.complet-search-content div.description p {
+  text-align: justify;
+}
+
+div.complet-search-content div.search-info {
+  width: 30%;
+  color: var(--secondary-color);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+div.complet-search-content div.search-info div.circle {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: 100%;
+  width: 5rem;
+  height: 5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
