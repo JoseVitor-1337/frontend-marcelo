@@ -2,15 +2,22 @@ import React, { useState } from "react";
 import { NavigationHeader } from "../../components/Navigation";
 import { SearchInput } from "../../components/Inputs";
 import { Pagination } from "../../components/Paginations";
-import { ResearcherSearchItem } from "../../components/Search";
-import { SearchDetailsModal } from "../../components/Modals";
+import { ResearcherSearchItem } from "../../components/SearchItems";
+import { AddParticipantIntoSearchModal } from "../../components/Modals";
 import "./style.css";
 
 const ResearcherSearchs = () => {
   const [filter, setFilter] = useState(``);
-  const [searchDetailModalIsOpent, setSearchDetailModalIsOpent] = useState(
-    false
-  );
+  const [searchId, setSearchId] = useState("");
+  const [
+    addParticipantIntoSearchModalIsOpen,
+    setAddParticipantIntoSearchModalIsOpen,
+  ] = useState(false);
+
+  function openAddParticipantIntoSearchModal(searchId) {
+    setAddParticipantIntoSearchModalIsOpen(true);
+    setSearchId(searchId);
+  }
 
   const navigationItems = [
     {
@@ -21,7 +28,7 @@ const ResearcherSearchs = () => {
 
   return (
     <>
-      {searchDetailModalIsOpent === false ? (
+      {addParticipantIntoSearchModalIsOpen === false ? (
         <>
           <NavigationHeader items={navigationItems} />
           <SearchInput
@@ -31,15 +38,26 @@ const ResearcherSearchs = () => {
             setValue={setFilter}
           />
           <div className="searchs-item-container">
-            <ResearcherSearchItem />
-            <ResearcherSearchItem />
-            <ResearcherSearchItem />
-            <ResearcherSearchItem />
+            <ResearcherSearchItem
+              openModal={openAddParticipantIntoSearchModal}
+            />
+            <ResearcherSearchItem
+              openModal={openAddParticipantIntoSearchModal}
+            />
+            <ResearcherSearchItem
+              openModal={openAddParticipantIntoSearchModal}
+            />
+            <ResearcherSearchItem
+              openModal={openAddParticipantIntoSearchModal}
+            />
           </div>
           <Pagination maxItems={40} itemsPerPage={4} />
         </>
       ) : (
-        <SearchDetailsModal closeModal={setSearchDetailModalIsOpent} />
+        <AddParticipantIntoSearchModal
+          searchId={searchId}
+          closeModal={setAddParticipantIntoSearchModalIsOpen}
+        />
       )}
     </>
   );

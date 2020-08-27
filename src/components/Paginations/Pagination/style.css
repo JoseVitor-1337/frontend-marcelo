@@ -1,6 +1,6 @@
 ul.pagination {
   width: 100%;
-  background-color: var(--primary-color);
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,6 +10,7 @@ ul.pagination {
 
 ul.pagination li {
   list-style: none;
+
   background-color: var(--primary-color);
   color: var(--secondary-color);
 
@@ -34,6 +35,7 @@ ul.pagination li {
 }
 
 .active {
+  border: 0.1rem solid var(--primary-color);
   background-color: var(--secondary-color) !important;
   color: var(--primary-color) !important;
 }
@@ -41,6 +43,7 @@ ul.pagination li {
 ul.pagination li:hover {
   background-color: var(--secondary-color);
   color: var(--primary-color);
+  border: 0.1rem solid var(--primary-color);
 }
 
 @media only screen and (max-width: 450px) {

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavigationHeader } from "../../components/Navigation";
 import { SearchInput } from "../../components/Inputs";
 import { Pagination } from "../../components/Paginations";
-import { ParticipantCompletSearchItem } from "../../components/Search";
+import { ParticipantCompletSearchItem } from "../../components/SearchItems";
 import { SearchDetailsModal } from "../../components/Modals";
 import "./style.css";
 

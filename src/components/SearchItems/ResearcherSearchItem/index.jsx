@@ -3,6 +3,7 @@ import searchSVG from "../../../assets/icons/search.svg";
 import "./style.css";
 
 const ResearcherSearchItem = (props) => {
+  const { openModal } = props;
   return (
     <div className="participant-search search-item">
       <header>
@@ -13,8 +14,10 @@ const ResearcherSearchItem = (props) => {
         </div>
       </header>
       <div className="researcher-content content">
+        <button onClick={() => openModal("ID")} className="circle">
+          Adicionar estudante
+        </button>
         <button className="circle">Abrir sessão</button>
-        <button className="circle">Adicionar estudante</button>
         <button className="circle">Editar pesquisa</button>
         <div className="search-info">
           <div className="circle">

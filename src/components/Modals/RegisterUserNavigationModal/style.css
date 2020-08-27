@@ -7,6 +7,7 @@ div.register-modal {
   justify-content: center;
   z-index: 1;
 }
+
 div.modal-content {
   position: relative;
   min-width: 35%;
@@ -18,7 +19,7 @@ div.modal-content {
   z-index: 1;
 }
 
-div.modal-content img.close-icon {
+img.close-icon {
   width: 2.4rem;
   height: 2.4rem;
   position: absolute;
@@ -27,14 +28,13 @@ div.modal-content img.close-icon {
   cursor: pointer;
   transition: all 0.5s;
   z-index: 1;
-  fill: red;
 }
 
-div.modal-content img.close-icon:hover {
+img.close-icon:hover {
   filter: brightness(0.9);
 }
 
-div.modal-header h2 {
+div.register-modal div.modal-header h2 {
   font-size: 1.6rem;
   margin: 1rem 0rem;
   margin-bottom: 5rem;

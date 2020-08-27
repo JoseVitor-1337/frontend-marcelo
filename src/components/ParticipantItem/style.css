@@ -1,0 +1,85 @@
+.participant-item {
+  min-width: 45%;
+  background-color: var(--secondary-color);
+  border: 0.15rem solid var(--primary-color);
+  border-radius: 0.8rem;
+  margin: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.participant-item header {
+  width: 100%;
+  background-color: var(--primary-color);
+  border-top-right-radius: 0.4rem;
+  border-top-left-radius: 0.4rem;
+  padding: 0.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.participant-item header img {
+  height: 3rem;
+  width: 3rem;
+  margin-right: 1rem;
+}
+
+.participant-item header div.description {
+  text-align: left;
+  color: var(--secondary-color);
+}
+
+.participant-item header div.description h2 {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.participant-item header div.description p {
+  font-weight: normal;
+  opacity: 0.8;
+  font-size: 0.8rem;
+}
+
+.participant-item div.content {
+  display: flex;
+}
+
+.participant-item div.content div.participant-info {
+  padding: 0.5rem;
+  text-align: left;
+  width: 70%;
+}
+
+.participant-item div.content div.participant-info p {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.participant-item div.content div.details {
+  width: 30%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.participant-item div.content div.details img {
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) {
+  .participant-item {
+    min-width: 95%;
+  }
+
+  .participant-item header {
+    justify-content: flex-start;
+  }
+}

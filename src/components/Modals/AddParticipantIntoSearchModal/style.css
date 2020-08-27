@@ -1,0 +1,59 @@
+div.add-participant-modal {
+  margin: 0 auto;
+  width: 60%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+div.add-participant-modal div.modal-content {
+  margin: 1rem 0;
+  min-width: 100% !important;
+  border-radius: 0;
+  padding: 0.5em;
+}
+
+div.add-participant-modal div.modal-content div.modal-header {
+  padding: 0 1rem;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+}
+
+div.add-participant-modal div.modal-content div.modal-header img {
+  width: 5rem;
+  height: 5rem;
+  margin-right: 1rem;
+}
+
+div#description h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-align: left;
+}
+
+div#description span {
+  font-size: 1rem;
+  font-weight: 700;
+  opacity: 0.8;
+  color: var(--primary-color);
+  text-align: left;
+}
+
+div.add-participant-modal div.modal-content div.modal-body {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 900px) {
+  div.add-participant-modal {
+    width: 90%;
+  }
+}
