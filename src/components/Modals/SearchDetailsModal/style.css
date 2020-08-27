@@ -34,13 +34,13 @@ div.search-details-modal header .description {
 
 div.search-details-modal header .description h2 {
   font-size: 2.2rem;
-  color: var(--text-primary-color);
+  color: var(--primary-color);
   font-weight: 700;
 }
 
 div.search-details-modal header .description span {
   font-size: 1.2rem;
-  color: var(--text-primary-color);
+  color: var(--primary-color);
   font-weight: 400;
 }
 
@@ -128,7 +128,7 @@ div.search-details div.search-info div.circle h2 {
 div.search-details div.search-info span {
   font-size: 1.2rem;
   font-weight: 500;
-  color: var(--text-primary-color);
+  color: var(--primary-color);
 }
 
 @media only screen and (max-width: 850px) {
@@ -153,6 +153,15 @@ div.search-details div.search-info span {
 }
 
 @media only screen and (max-width: 650px) {
+  div.search-details-modal header .description {
+    padding: 0;
+  }
+
+  div.search-details-modal header .description h2 {
+    font-size: 1.8rem;
+    color: var(--text-primary-color);
+    font-weight: 700;
+  }
   div.search-details,
   div.researcher-details {
     width: 100%;

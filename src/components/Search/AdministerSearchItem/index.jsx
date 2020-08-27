@@ -21,7 +21,9 @@ const AdministerSearchItem = (props) => {
           <p>Escolaridade: Pós-doutorado</p>
         </div>
         <div className="details">
-          <button onClick={openDetailModal}>Ver Detalhes</button>
+          <button onClick={() => openDetailModal({ search: "Search" })}>
+            Ver Detalhes
+          </button>
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { RectButton } from "../../Buttons";
+
 import searchSVG from "../../../assets/icons/search.svg";
 import "./style.css";
 

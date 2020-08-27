@@ -19,6 +19,7 @@ button.navigation:hover {
 
 div.register-container {
   border: 1.5px solid var(--secondary-color);
+
   min-width: 60rem;
   margin-top: 1rem;
   display: grid;

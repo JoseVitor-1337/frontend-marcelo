@@ -1,11 +1,13 @@
 import React, { memo } from "react";
-import { RectButton } from "../../Buttons";
+
 import searchSVG from "../../../assets/icons/search.svg";
 import "./style.css";
 
 import closeIcon from "../../../assets/icons/close.svg";
 
-const SearchDetailsModal = ({ closeModal }) => {
+const SearchDetailsModal = ({ closeModal, search }) => {
+  console.log(search);
+
   return (
     <div className="search-details-modal">
       <div className="modal-content">

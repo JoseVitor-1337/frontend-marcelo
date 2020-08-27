@@ -8,14 +8,14 @@ import "./style.css";
 
 const AdministerHome = () => {
   const [filter, setFilter] = useState(``);
+  const [searchToDetail, setSearchToDetail] = useState([]);
   const [searchDetailModalIsOpent, setSearchDetailModalIsOpent] = useState(
     false
   );
 
-  function openSearchDetailsModal() {
-    if (searchDetailModalIsOpent === false) {
-      setSearchDetailModalIsOpent(true);
-    }
+  function openSearchDetailsModal(search) {
+    setSearchDetailModalIsOpent(true);
+    setSearchToDetail(search);
   }
 
   const navigationItems = [
@@ -45,7 +45,10 @@ const AdministerHome = () => {
           <Pagination maxItems={40} itemsPerPage={4} />
         </>
       ) : (
-        <SearchDetailsModal closeModal={setSearchDetailModalIsOpent} />
+        <SearchDetailsModal
+          search={searchToDetail}
+          closeModal={setSearchDetailModalIsOpent}
+        />
       )}
     </>
   );

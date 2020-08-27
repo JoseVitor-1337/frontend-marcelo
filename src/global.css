@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #2460f9;
+  --primary-color: #4272eb;
   --primary-color-hover: #43a2fa;
   --text-primary-color: rgba(0, 0, 0, 0.75);
   --text-error-color: #f12531;
@@ -8,7 +8,7 @@
   --shadow-color: rgba(0, 0, 0, 0.25);
   --secondary-color: #ffffff;
 
-  font-size: 100%;
+  font-size: 110%;
 }
 
 * {
