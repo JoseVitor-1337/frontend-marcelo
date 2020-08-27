@@ -60,7 +60,7 @@ const SearchDetailsModal = ({ closeModal }) => {
               </div>
               <span>Erros</span>
             </div>
-            <RectButton title="Gerar CSV" />
+            <button>Gerar CSV</button>
           </div>
         </div>
       </div>

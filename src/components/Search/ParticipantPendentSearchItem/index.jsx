@@ -14,7 +14,7 @@ const ParticipantPendentSearchItem = (props) => {
         </div>
       </header>
       <div className="pendent-search-content content">
-        <RectButton title="Iniciar sessão" />
+        <button>Iniciar Sessão</button>
       </div>
     </div>
   );

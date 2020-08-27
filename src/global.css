@@ -35,6 +35,11 @@ body {
 
 button {
   font-family: "Roboto", sans-serif;
+  color: var(--text-secondary-color);
+  background-color: var(--primary-color);
+  border: 0;
+  transition: all 0.5s;
+  cursor: pointer;
 }
 
 label {

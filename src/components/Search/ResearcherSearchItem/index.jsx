@@ -1,9 +1,8 @@
 import React, { memo } from "react";
-
 import searchSVG from "../../../assets/icons/search.svg";
 import "./style.css";
 
-const ParticipantCompletSearchItem = (props) => {
+const ResearcherSearchItem = (props) => {
   return (
     <div className="participant-search search-item">
       <header>
@@ -13,23 +12,19 @@ const ParticipantCompletSearchItem = (props) => {
           <span>Uma breve descrição sobre a pesquisa trabalhada</span>
         </div>
       </header>
-      <div className="complet-search-content content">
-        <div className="description">
-          <h3>Conteudo</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis
-            repellendus, reiciendis optio natus ea dignissimos
-          </p>
-        </div>
+      <div className="researcher-content content">
+        <button className="circle">Abrir sessão</button>
+        <button className="circle">Adicionar estudante</button>
+        <button className="circle">Editar pesquisa</button>
         <div className="search-info">
           <div className="circle">
-            <h2>10/12</h2>
+            <h2>27</h2>
           </div>
-          <span>Resultado</span>
+          <p>Participantes</p>
         </div>
       </div>
     </div>
   );
 };
 
-export default memo(ParticipantCompletSearchItem);
+export default memo(ResearcherSearchItem);

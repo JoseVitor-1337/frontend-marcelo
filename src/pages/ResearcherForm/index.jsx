@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { SubmitButton, NavigationButton } from "../../components/Buttons";
+
 import { TextInput, PasswordInput } from "../../components/Inputs";
 import { Select } from "../../components/Selects";
 import axios from "axios";
@@ -64,10 +64,9 @@ const ResearcherForm = () => {
       <header>
         <h2>Pesquisador</h2>
         <div className="go-back">
-          <NavigationButton
-            action={goBackToLoginPage}
-            title="Voltar ao Login"
-          />
+          <button onClick={goBackToLoginPage} className="navigation">
+            Voltar ao Login
+          </button>
         </div>
       </header>
       <form onSubmit={registerNewParticipant} autoComplete="Off">
@@ -152,7 +151,7 @@ const ResearcherForm = () => {
           />
 
           <div className="submit researcher-submit">
-            <SubmitButton title="Cadastrar-se" />
+            <button className="submit">Cadastrar-se</button>
           </div>
         </div>
       </form>

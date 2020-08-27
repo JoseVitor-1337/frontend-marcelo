@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavigationHeader } from "../../components/Navigation";
 import { SearchInput } from "../../components/Inputs";
 import { Pagination } from "../../components/Paginations";
-import {} from "../../components/Search";
+import { ResearcherSearchItem } from "../../components/Search";
 import { SearchDetailsModal } from "../../components/Modals";
 import "./style.css";
 
@@ -30,7 +30,12 @@ const ResearcherSearchs = () => {
             value={filter}
             setValue={setFilter}
           />
-          <div className="searchs-item-container"></div>
+          <div className="searchs-item-container">
+            <ResearcherSearchItem />
+            <ResearcherSearchItem />
+            <ResearcherSearchItem />
+            <ResearcherSearchItem />
+          </div>
           <Pagination maxItems={40} itemsPerPage={4} />
         </>
       ) : (

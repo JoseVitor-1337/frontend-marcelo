@@ -1,5 +1,4 @@
 import React, { memo } from "react";
-import { CircleButton } from "../../Buttons";
 import searchSVG from "../../../assets/icons/search.svg";
 import "./style.css";
 
@@ -22,7 +21,7 @@ const AdministerSearchItem = (props) => {
           <p>Escolaridade: Pós-doutorado</p>
         </div>
         <div className="details">
-          <CircleButton action={openDetailModal} title="Ver Detalhes" />
+          <button onClick={openDetailModal}>Ver Detalhes</button>
         </div>
       </div>
     </div>

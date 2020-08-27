@@ -82,6 +82,21 @@ div.search-details {
   justify-content: space-between;
 }
 
+div.search-details button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border: 0.2rem solid var(--text-secondary-color);
+}
+
+div.search-details button:hover {
+  background-color: var(--text-secondary-color);
+  color: var(--primary-color);
+  border: 0.2rem solid var(--primary-color);
+}
+
 div.search-details div.search-info {
   width: 8rem;
   padding: 1.2rem;

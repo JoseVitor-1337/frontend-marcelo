@@ -5,7 +5,7 @@ import {
   CheckBoxInput,
 } from "../../components/Inputs";
 import { RegisterUserNavigationModal } from "../../components/Modals";
-import { SubmitButton } from "../../components/Buttons";
+
 import "./style.css";
 
 const LoginForm = () => {
@@ -47,11 +47,15 @@ const LoginForm = () => {
           />
           <CheckBoxInput label="Manter-se conectado" />
           <div className="buttons">
-            <SubmitButton action={logIn} title="Login" />
-            <SubmitButton
-              action={openRegisterUserNavigationModal}
-              title="Novo Cadastro"
-            />
+            <button className="submit" onClick={logIn}>
+              Login
+            </button>
+            <button
+              className="submit"
+              onClick={openRegisterUserNavigationModal}
+            >
+              Novo Cadastro
+            </button>
           </div>
         </div>
       ) : (

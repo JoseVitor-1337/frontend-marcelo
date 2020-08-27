@@ -1,7 +1,7 @@
 div.search-item {
   width: 45%;
   background-color: var(--primary-color);
-  margin: 0.5rem 0;
+  margin: 1rem 0;
 
   border: 0.3rem solid var(--text-secondary-color);
   border-radius: 1rem;
@@ -47,7 +47,7 @@ div.search-item div.content {
 }
 
 div.search-item div.researcher-info {
-  width: 75%;
+  width: 60%;
   padding: 0.8rem;
 
   color: var(--text-secondary-color);
@@ -61,12 +61,27 @@ div.search-item div.researcher-info p {
 }
 
 div.search-item div.content div.details {
+  width: 40%;
+  padding: 0 1rem;
   display: flex;
 
   align-items: center;
   justify-content: center;
 }
 
+div.search-item div.content div.details button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  border: 0.2rem solid var(--text-secondary-color);
+}
+
+div.search-item div.content div.details button:hover {
+  color: var(--primary-color);
+  background-color: var(--text-secondary-color);
+  border: 0.2rem solid var(--primary-color);
+}
 @media only screen and (max-width: 1100px) {
   div.search-item {
     width: 45%;

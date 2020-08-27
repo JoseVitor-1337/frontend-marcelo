@@ -1,3 +1,22 @@
+button.navigation {
+  position: relative;
+  text-transform: uppercase;
+  color: var(--text-secondary-color);
+  background-color: var(--primary-color);
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+  width: 100%;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.5s;
+  border: 0.15rem solid var(--secondary-color);
+}
+
+button.navigation:hover {
+  background-color: var(--primary-color-hover);
+}
+
 div.register-container {
   border: 1.5px solid var(--secondary-color);
   min-width: 60rem;

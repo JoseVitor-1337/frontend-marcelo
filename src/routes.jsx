@@ -4,7 +4,7 @@ import { BrowserRouter, Switch } from "react-router-dom";
 import LoginForm from "./pages/LoginForm";
 import ParticipantForm from "./pages/ParticipantForm";
 import ResearcherForm from "./pages/ResearcherForm";
-import AdministerHome from "./pages/AdministerHome";
+import AdministerSearchs from "./pages/AdministerSearchs";
 import ParticipantPendentSearchs from "./pages/ParticipantPendentSearchs";
 import ParticipantCompletSearchs from "./pages/ParticipantCompletSearchs";
 import ResearcherSearchs from "./pages/ResearcherSearchs";
@@ -38,7 +38,7 @@ const Routes = () => {
         />
         <AdministerRouter
           path="/administer/searchs"
-          component={AdministerHome}
+          component={AdministerSearchs}
         />
       </Switch>
     </BrowserRouter>
