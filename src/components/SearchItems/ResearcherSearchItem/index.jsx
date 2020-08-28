@@ -1,9 +1,18 @@
 import React, { memo } from "react";
+import { useHistory } from "react-router-dom";
 import searchSVG from "../../../assets/icons/search.svg";
 import "./style.css";
 
 const ResearcherSearchItem = (props) => {
+  const navigation = useHistory();
   const { openModal } = props;
+
+  function handleUpdateSearch() {
+    // Passar ID
+
+    navigation.push("/researcher/create");
+  }
+
   return (
     <div className="participant-search search-item">
       <header>
@@ -18,7 +27,9 @@ const ResearcherSearchItem = (props) => {
           Adicionar estudante
         </button>
         <button className="circle">Abrir sessão</button>
-        <button className="circle">Editar pesquisa</button>
+        <button onClick={handleUpdateSearch} className="circle">
+          Editar pesquisa
+        </button>
         <div className="search-info">
           <div className="circle">
             <h2>27</h2>

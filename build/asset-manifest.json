@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.dafc4571.chunk.css",
+    "main.js": "/static/js/main.e3a6fc48.chunk.js",
+    "main.js.map": "/static/js/main.e3a6fc48.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c8a21426.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c8a21426.js.map",
+    "static/js/2.04857558.chunk.js": "/static/js/2.04857558.chunk.js",
+    "static/js/2.04857558.chunk.js.map": "/static/js/2.04857558.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.a55ada2b23254e4e32491ba06e801e53.js": "/precache-manifest.a55ada2b23254e4e32491ba06e801e53.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.dafc4571.chunk.css.map": "/static/css/main.dafc4571.chunk.css.map",
+    "static/js/2.04857558.chunk.js.LICENSE.txt": "/static/js/2.04857558.chunk.js.LICENSE.txt",
+    "static/media/style.css": "/static/media/check.93f3e5d3.svg",
+    "static/media/close.svg": "/static/media/close.c9cd2e4c.svg",
+    "static/media/password-hidden.svg": "/static/media/password-hidden.6898db03.svg",
+    "static/media/password-visible.svg": "/static/media/password-visible.1e361799.svg",
+    "static/media/plus.svg": "/static/media/plus.371e27f8.svg",
+    "static/media/search.svg": "/static/media/search.6d5b0010.svg",
+    "static/media/user.svg": "/static/media/user.45dd5f2b.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c8a21426.js",
+    "static/js/2.04857558.chunk.js",
+    "static/css/main.dafc4571.chunk.css",
+    "static/js/main.e3a6fc48.chunk.js"
+  ]
+}

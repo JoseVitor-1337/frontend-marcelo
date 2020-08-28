@@ -8,6 +8,7 @@ import AdministerSearchs from "./pages/AdministerSearchs";
 import ParticipantPendentSearchs from "./pages/ParticipantPendentSearchs";
 import ParticipantCompletSearchs from "./pages/ParticipantCompletSearchs";
 import ResearcherSearchs from "./pages/ResearcherSearchs";
+import CreateSearch from "./pages/CreateSearch";
 
 import PublicRouter from "./routes/PublicRouter";
 import AdministerRouter from "./routes/AdministerRouter";
@@ -32,14 +33,15 @@ const Routes = () => {
           path="/participant/complet_searchs"
           component={ParticipantCompletSearchs}
         />
-        <ResearcherRouter
-          path="/researcher/searchs"
-          component={ResearcherSearchs}
-        />
         <AdministerRouter
           path="/administer/searchs"
           component={AdministerSearchs}
         />
+        <ResearcherRouter
+          path="/researcher/searchs"
+          component={ResearcherSearchs}
+        />
+        <ResearcherRouter path="/researcher/create" component={CreateSearch} />
       </Switch>
     </BrowserRouter>
   );

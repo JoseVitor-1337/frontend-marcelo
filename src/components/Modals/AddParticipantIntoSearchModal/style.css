@@ -28,6 +28,10 @@ div.add-participant-modal div.modal-content div.modal-header img {
   margin-right: 1rem;
 }
 
+div.add-participant-modal div.modal-content div.modal-header img:hover {
+  filter: brightness(0.9);
+}
+
 div#description h2 {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;

@@ -21,6 +21,14 @@ const ResearcherSearchs = () => {
 
   const navigationItems = [
     {
+      to: "/researcher/searchs",
+      title: "Pesquisas",
+    },
+    {
+      to: "/researcher/create",
+      title: "Criar Pesquisa",
+    },
+    {
       to: "/",
       title: "Sair",
     },

@@ -1,0 +1,63 @@
+div.search-config {
+  padding: 1rem 0.5rem;
+  width: 65vw;
+  background-color: var(--secondary-color);
+  border-radius: 0.5rem;
+  border: 0.1rem solid var(--secondary-color);
+  margin: 1rem auto 3rem auto;
+}
+
+div.search-config header {
+  padding: 0.8rem;
+  background-color: var(--primary-color);
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+div.search-config header h2 {
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  color: var(--secondary-color);
+  text-align: justify;
+}
+
+div.search-config form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  flex-wrap: wrap;
+}
+
+div.search-config form .first-form-group {
+  width: 100%;
+}
+
+div.mts-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+div.search-questions {
+  padding: 1rem 0.5rem;
+  width: 95vw;
+  background-color: var(--secondary-color);
+  border-radius: 0.5rem;
+  border: 0.1rem solid var(--secondary-color);
+  margin: 1rem 0;
+}
+
+div.search-questions header {
+  padding: 0.8rem;
+  background-color: var(--primary-color);
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+div.search-questions header h2 {
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  color: var(--secondary-color);
+  text-align: justify;
+}

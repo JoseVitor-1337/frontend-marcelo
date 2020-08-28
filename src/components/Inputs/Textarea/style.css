@@ -1,0 +1,16 @@
+.textarea-group {
+  width: 100%;
+  margin-bottom: 1rem;
+
+  display: flex;
+  flex-direction: column;
+}
+textarea {
+  padding: 0.5rem;
+  resize: vertical;
+  transition: all 0.5s;
+}
+
+textarea:focus {
+  border: 0.15rem solid var(--primary-color);
+}

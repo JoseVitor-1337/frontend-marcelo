@@ -3,7 +3,7 @@ import React, { memo } from "react";
 import "./style.css";
 
 const TextInput = (props) => {
-  const { name, pattern, value, setValue, label } = props;
+  const { name, pattern, disabled, value, setValue, label } = props;
 
   function validateValueOfInputField(event) {
     const span = document.getElementById(`message-${name}`);
@@ -34,6 +34,7 @@ const TextInput = (props) => {
         id={name}
         pattern={pattern ? pattern : ".{1,}"}
         required
+        disabled={disabled === true ? true : false}
         autoComplete="Off"
       />
     </div>

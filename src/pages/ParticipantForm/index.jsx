@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { TextInput, PasswordInput } from "../../components/Inputs";
-import { Select } from "../../components/Selects";
+import { TextInput, PasswordInput, Select } from "../../components/Inputs";
+
 import axios from "axios";
 import "./style.css";
 
