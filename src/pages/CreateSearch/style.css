@@ -1,4 +1,4 @@
-div.search-config {
+.search-config {
   padding: 1rem 0.5rem;
   width: 65vw;
   background-color: var(--secondary-color);
@@ -7,21 +7,21 @@ div.search-config {
   margin: 1rem auto 3rem auto;
 }
 
-div.search-config header {
+.search-config header {
   padding: 0.8rem;
   background-color: var(--primary-color);
   border-radius: 0.8rem;
   margin-bottom: 1rem;
 }
 
-div.search-config header h2 {
+.search-config header h2 {
   font-size: 1.8rem;
   letter-spacing: 0.1rem;
   color: var(--secondary-color);
   text-align: justify;
 }
 
-div.search-config form {
+.search-config form {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -29,17 +29,17 @@ div.search-config form {
   flex-wrap: wrap;
 }
 
-div.search-config form .first-form-group {
+.search-config form .first-form-group {
   width: 100%;
 }
 
-div.mts-group {
+.mts-group {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
-div.search-questions {
+.search-questions {
   padding: 1rem 0.5rem;
   width: 95vw;
   background-color: var(--secondary-color);
@@ -48,16 +48,73 @@ div.search-questions {
   margin: 1rem 0;
 }
 
-div.search-questions header {
+.search-questions header {
   padding: 0.8rem;
   background-color: var(--primary-color);
   border-radius: 0.8rem;
   margin-bottom: 1rem;
 }
 
-div.search-questions header h2 {
+.search-questions header h2 {
   font-size: 1.8rem;
   letter-spacing: 0.1rem;
   color: var(--secondary-color);
   text-align: justify;
+}
+
+.search-questions .questions-content {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 15% 40% 45%;
+}
+
+.questions-content .question-menu {
+  background-color: var(--primary-color);
+
+  height: 100%;
+}
+
+.question-menu,
+.question-form,
+.question-preview {
+  border-top: 0.4rem solid var(--primary-color);
+  border-left: 0.2rem solid var(--primary-color);
+  border-right: 0.2rem solid var(--primary-color);
+  border-bottom: 0.4rem solid var(--primary-color);
+}
+
+.question-menu button {
+  width: 100%;
+  padding: 1rem 0.5rem;
+  font-size: 1rem;
+  border: 0.2rem solid var(--secondary-color);
+}
+
+.questions-content .question-form {
+  padding: 1rem;
+}
+
+.question-form button.alternative {
+  padding: 0.8rem;
+  border: 0.1rem solid var(--primary-color);
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.question-form div.alternative-group {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.questions-content .question-preview {
+  background-color: black;
+}
+
+.question-form button.alternative:hover,
+.question-menu button:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
 }

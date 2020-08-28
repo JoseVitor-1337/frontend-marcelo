@@ -1,0 +1,16 @@
+.upload-group label {
+  background-color: var(--secondary-color);
+  border: 0.25rem solid var(--shadow-color);
+  border-radius: 0.5rem;
+  width: 100%;
+  margin: 1rem auto;
+  display: block;
+
+  padding: 3rem;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.upload-group input {
+  display: none;
+}

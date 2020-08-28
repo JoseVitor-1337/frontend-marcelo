@@ -3,6 +3,7 @@ import TextInput from "./TextInput";
 import CheckBoxInput from "./CheckBoxInput";
 import SearchInput from "./SearchInput";
 import Textarea from "./Textarea";
+import UploadInput from "./UploadInput";
 import Select from "./Select";
 
 export {
@@ -12,4 +13,5 @@ export {
   SearchInput,
   Textarea,
   Select,
+  UploadInput,
 };

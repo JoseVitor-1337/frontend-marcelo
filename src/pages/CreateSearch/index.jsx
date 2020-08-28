@@ -1,5 +1,10 @@
 import React, { useEffect, useState, memo } from "react";
-import { TextInput, Textarea, Select } from "../../components/Inputs";
+import {
+  TextInput,
+  Textarea,
+  UploadInput,
+  Select,
+} from "../../components/Inputs";
 
 import "./style.css";
 
@@ -8,10 +13,22 @@ const CreateSearch = () => {
   const [type, setType] = useState("");
   const [content, setContent] = useState("");
   const [description, setDescription] = useState("");
-
   const [retries, setRetries] = useState("");
   const [MTS, setMTS] = useState("");
   const [interval, setInterval] = useState("");
+
+  const [questionType, setQuestionType] = useState("");
+  const [structure, setStructure] = useState("");
+  const [stimulus, setStimulus] = useState("");
+  const [question, setQuestion] = useState("");
+  const [questionImage, setQuestionImage] = useState("");
+  const [alternatives, setAlternatives] = useState([
+    {
+      corret: "",
+      option: "",
+      answer: "",
+    },
+  ]);
 
   function createSearchConfig(event) {
     event.preventDefault();
@@ -110,11 +127,90 @@ const CreateSearch = () => {
           <h2>Perguntas da Pesquisa</h2>
         </header>
 
-        <main>
-          <div className="questions-menu"></div>
+        <div className="questions-content">
+          <div className="question-menu">
+            <button className="new-question">Criar nova pergunta</button>
+          </div>
 
-          <div className="question"></div>
-        </main>
+          <div className="question-form">
+            <TextInput
+              name="questionType"
+              label="Tipo da pergunta"
+              value={questionType}
+              setValue={setQuestionType}
+            />
+
+            <TextInput
+              name="structure"
+              label="Estrutura"
+              value={structure}
+              setValue={setStructure}
+            />
+
+            <TextInput
+              name="stimulus"
+              label="Estímulo da pergunta"
+              value={stimulus}
+              setValue={setStimulus}
+            />
+
+            <div className="group">
+              <UploadInput
+                name="questionImage"
+                label="Clique para selecionar uma imagem para a pergunta"
+                value={questionImage}
+                setValue={setQuestionImage}
+              />
+
+              <TextInput
+                name="question"
+                label="Faça a Pergunta"
+                value={question}
+                setValue={setQuestion}
+              />
+            </div>
+
+            <button className="alternative">Criar Alternativas</button>
+
+            <div className="alternative">
+              <div className="alternative-group">
+                <Select
+                  name="correct"
+                  label="Correta?"
+                  options={["Sim", "Não"]}
+                  value={MTS}
+                  setValue={setMTS}
+                />
+
+                <TextInput
+                  name="option"
+                  label="Opição"
+                  patter={"^{1}$"}
+                  value={MTS}
+                  setValue={setMTS}
+                />
+              </div>
+
+              <div className="group">
+                <UploadInput
+                  name="questionImage"
+                  label="Clique para selecionar uma imagem para a resposta"
+                  value={questionImage}
+                  setValue={setQuestionImage}
+                />
+
+                <TextInput
+                  name="answer"
+                  label="Resposta"
+                  value={question}
+                  setValue={setQuestion}
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="question-preview"></div>
+        </div>
       </div>
     </>
   );
