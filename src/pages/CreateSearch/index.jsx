@@ -1,14 +1,12 @@
-import React, { useEffect, useState, memo } from "react";
-import {
-  TextInput,
-  Textarea,
-  UploadInput,
-  Select,
-} from "../../components/Inputs";
+import React, { useState } from "react";
+import { QuestionItem } from "../../components/Questions";
+import { TextInput, Textarea, Select } from "../../components/Inputs";
 
 import "./style.css";
 
 const CreateSearch = () => {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
   const [title, setTitle] = useState("");
   const [type, setType] = useState("");
   const [content, setContent] = useState("");
@@ -17,16 +15,20 @@ const CreateSearch = () => {
   const [MTS, setMTS] = useState("");
   const [interval, setInterval] = useState("");
 
-  const [questionType, setQuestionType] = useState("");
-  const [structure, setStructure] = useState("");
-  const [stimulus, setStimulus] = useState("");
-  const [question, setQuestion] = useState("");
-  const [questionImage, setQuestionImage] = useState("");
-  const [alternatives, setAlternatives] = useState([
+  const [questions, setQuestions] = useState([
     {
-      corret: "",
-      option: "",
-      answer: "",
+      type: "",
+      structure: "",
+      stimulus: "",
+      question: "",
+      alternatives: [
+        {
+          corret: "",
+          option: "",
+          answer: "",
+          image: "",
+        },
+      ],
     },
   ]);
 
@@ -44,10 +46,29 @@ const CreateSearch = () => {
     });
   }
 
-  useEffect(() => {
-    if (true) {
-    }
-  }, []);
+  function selectQuestion(questionIndex) {
+    setSelectedIndex(questionIndex);
+  }
+
+  function createNewQuestion() {
+    setQuestions([
+      ...questions,
+      {
+        type: "",
+        structure: "",
+        stimulus: "",
+        question: "",
+        alternatives: [
+          {
+            corret: "",
+            option: "",
+            answer: "",
+            image: "",
+          },
+        ],
+      },
+    ]);
+  }
 
   return (
     <>
@@ -59,7 +80,7 @@ const CreateSearch = () => {
         <form onSubmit={createSearchConfig}>
           <div className="first-form-group">
             <TextInput
-              name="type"
+              name="searchType"
               pattern={".{4,}"}
               label="Tipo"
               value={type}
@@ -116,6 +137,7 @@ const CreateSearch = () => {
               />
             </div>
           </div>
+
           <button className="submit" type="submit">
             Criar Pesquisa
           </button>
@@ -129,91 +151,40 @@ const CreateSearch = () => {
 
         <div className="questions-content">
           <div className="question-menu">
-            <button className="new-question">Criar nova pergunta</button>
+            <button onClick={createNewQuestion} className="new-question">
+              Criar nova pergunta
+            </button>
+
+            {questions.map((question, index) => {
+              const questionName = `${index + 1} Pergunta`;
+
+              return (
+                <button
+                  onClick={() => selectQuestion(index)}
+                  key={index}
+                  className="question"
+                >
+                  {questionName}
+                </button>
+              );
+            })}
           </div>
 
-          <div className="question-form">
-            <TextInput
-              name="questionType"
-              label="Tipo da pergunta"
-              value={questionType}
-              setValue={setQuestionType}
-            />
-
-            <TextInput
-              name="structure"
-              label="Estrutura"
-              value={structure}
-              setValue={setStructure}
-            />
-
-            <TextInput
-              name="stimulus"
-              label="Estímulo da pergunta"
-              value={stimulus}
-              setValue={setStimulus}
-            />
-
-            <div className="group">
-              <UploadInput
-                name="questionImage"
-                label="Clique para selecionar uma imagem para a pergunta"
-                value={questionImage}
-                setValue={setQuestionImage}
+          {questions.map((question, index) => {
+            return (
+              <QuestionItem
+                index={selectedIndex}
+                selectedIndex={index}
+                key={index}
+                questions={questions}
+                setQuestions={setQuestions}
               />
-
-              <TextInput
-                name="question"
-                label="Faça a Pergunta"
-                value={question}
-                setValue={setQuestion}
-              />
-            </div>
-
-            <button className="alternative">Criar Alternativas</button>
-
-            <div className="alternative">
-              <div className="alternative-group">
-                <Select
-                  name="correct"
-                  label="Correta?"
-                  options={["Sim", "Não"]}
-                  value={MTS}
-                  setValue={setMTS}
-                />
-
-                <TextInput
-                  name="option"
-                  label="Opição"
-                  patter={"^{1}$"}
-                  value={MTS}
-                  setValue={setMTS}
-                />
-              </div>
-
-              <div className="group">
-                <UploadInput
-                  name="questionImage"
-                  label="Clique para selecionar uma imagem para a resposta"
-                  value={questionImage}
-                  setValue={setQuestionImage}
-                />
-
-                <TextInput
-                  name="answer"
-                  label="Resposta"
-                  value={question}
-                  setValue={setQuestion}
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="question-preview"></div>
+            );
+          })}
         </div>
       </div>
     </>
   );
 };
 
-export default memo(CreateSearch);
+export default CreateSearch;

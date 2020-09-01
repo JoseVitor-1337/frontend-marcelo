@@ -1,0 +1,27 @@
+.question-form div.configurations {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.question-form button {
+  padding: 0.8rem;
+  background-color: var(--primary-color);
+  border: 0.1rem solid var(--primary-color);
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.question-form button.create {
+  margin: 1rem 0;
+  width: 100%;
+}
+
+#show {
+  display: block;
+}
+
+#hidden {
+  display: none;
+}

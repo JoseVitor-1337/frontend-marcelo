@@ -1,0 +1,36 @@
+.alternative {
+  margin: 1rem 0;
+  border: 0.5rem solid var(--primary-color);
+
+  border-radius: 0.5rem;
+}
+
+.alternative .alternative-header {
+  padding: 0.5rem;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.alternative .alternative-header h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.alternative .alternative-header button {
+  border: 0.2rem solid var(--secondary-color);
+}
+
+.alternative-group,
+.group {
+  padding: 1rem;
+}
+
+.alternative-group {
+  display: grid;
+  grid-template-columns: 49% 49%;
+  gap: 2%;
+}

@@ -2,7 +2,7 @@ import React, { memo } from "react";
 
 import "./style.css";
 
-const Select = ({ name, value, setValue, label, options }) => {
+const Select = ({ name, value, setValue, label, options, index }) => {
   return (
     <div className="select-group">
       <label htmlFor={name}>{label}</label>
@@ -10,7 +10,7 @@ const Select = ({ name, value, setValue, label, options }) => {
         name={name}
         id={name}
         value={value}
-        onChange={(event) => setValue(event.target.value)}
+        onChange={(event) => setValue(event.target.value, name, index)}
         required
       >
         <option value="" disabled hidden>

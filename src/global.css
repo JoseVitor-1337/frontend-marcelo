@@ -55,7 +55,7 @@ select,
 input {
   border-radius: 0.5rem;
   font-size: 1rem;
-  font-family: "Rasa", serif;
+  font-family: "Roboto", sans-serif;
   border: 0.15rem solid var(--shadow-color);
   font-weight: 500;
 }

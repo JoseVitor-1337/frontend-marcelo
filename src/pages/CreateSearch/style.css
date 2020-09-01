@@ -1,6 +1,6 @@
 .search-config {
   padding: 1rem 0.5rem;
-  width: 65vw;
+  width: 50vw;
   background-color: var(--secondary-color);
   border-radius: 0.5rem;
   border: 0.1rem solid var(--secondary-color);
@@ -41,7 +41,7 @@
 
 .search-questions {
   padding: 1rem 0.5rem;
-  width: 95vw;
+  width: 60vw;
   background-color: var(--secondary-color);
   border-radius: 0.5rem;
   border: 0.1rem solid var(--secondary-color);
@@ -66,7 +66,7 @@
   width: 100%;
 
   display: grid;
-  grid-template-columns: 15% 40% 45%;
+  grid-template-columns: 25% 75%;
 }
 
 .questions-content .question-menu {
@@ -86,34 +86,31 @@
 
 .question-menu button {
   width: 100%;
-  padding: 1rem 0.5rem;
+  padding: 1rem 0.2rem;
   font-size: 1rem;
   border: 0.2rem solid var(--secondary-color);
+}
+
+@media only screen and (max-width: 450px) {
+  .search-config header h2 {
+    text-align: center;
+  }
+  .search-config {
+    width: 100vw;
+    border-radius: 0;
+    margin: 0;
+  }
 }
 
 .questions-content .question-form {
   padding: 1rem;
 }
 
-.question-form button.alternative {
-  padding: 0.8rem;
-  border: 0.1rem solid var(--primary-color);
-  font-size: 1rem;
-  border-radius: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.question-form div.alternative-group {
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
 .questions-content .question-preview {
   background-color: black;
 }
 
-.question-form button.alternative:hover,
+.question-form button:hover,
 .question-menu button:hover {
   background-color: var(--secondary-color);
   color: var(--primary-color);

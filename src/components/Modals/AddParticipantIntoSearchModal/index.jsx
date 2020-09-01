@@ -1,6 +1,6 @@
 import React, { useState, memo } from "react";
 import { Pagination } from "../../Paginations";
-import ParticipantItem from "../../ParticipantItem";
+import { ParticipantItem } from "../../Participants";
 import { SearchInput } from "../../Inputs";
 import "./style.css";
 

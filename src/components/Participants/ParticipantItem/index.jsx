@@ -1,6 +1,6 @@
 import React, { memo } from "react";
-import userSVG from "../../assets/icons/user.svg";
-import plusSVG from "../../assets/icons/plus.svg";
+import userSVG from "../../../assets/icons/user.svg";
+import plusSVG from "../../../assets/icons/plus.svg";
 import "./style.css";
 
 const ParticipantItem = (props) => {
