@@ -6,8 +6,6 @@ const UploadInput = (props) => {
   const { name, value, index, setValue, label } = props;
 
   const preview = useMemo(() => {
-    console.log(value);
-
     return value !== "" ? URL.createObjectURL(value) : "";
   }, [value]);
 
@@ -15,11 +13,14 @@ const UploadInput = (props) => {
 
   return (
     <div className="upload-group">
-      <label htmlFor={`${name} ${index}`}>{label}</label>
+      <label
+        style={{ backgroundImage: `url(${preview})` }}
+        htmlFor={`${name} ${index}`}
+      >{`${preview !== "" ? "" : label}`}</label>
 
       <input
         type="file"
-        value={value}
+        value={""}
         onChange={(event) => setValue(event.target.files[0], name, index)}
         name={name}
         id={`${name} ${index}`}

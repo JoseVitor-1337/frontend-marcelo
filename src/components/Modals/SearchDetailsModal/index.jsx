@@ -22,8 +22,6 @@ const SearchDetailsModal = (props) => {
     email,
   } = researcher;
 
-  function calculateTheWrongPercent() {}
-
   return (
     <div className="search-details-modal">
       <div className="modal-content">

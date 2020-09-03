@@ -14,6 +14,10 @@ const AdministerHome = () => {
     false
   );
 
+  function handleFilterOnSearchs(value) {
+    console.log(`value: ${value}`);
+  }
+
   useEffect(() => {
     setSearchs([
       {
@@ -107,6 +111,7 @@ const AdministerHome = () => {
         <>
           <NavigationHeader items={navigationItems} />
           <SearchInput
+            makeSearch={handleFilterOnSearchs}
             nama="Search"
             placeholder="Procurar suas pesquisas"
             value={filter}

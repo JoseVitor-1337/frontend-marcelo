@@ -5,7 +5,7 @@ import "./style.css";
 import closeIcon from "../../../assets/icons/close.svg";
 
 const PreviewQuestionModal = (props) => {
-  const { questions, closeModal } = props;
+  const { closeModal } = props;
 
   return (
     <div className="search-details-modal">
