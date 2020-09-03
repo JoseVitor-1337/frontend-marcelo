@@ -28,8 +28,6 @@ const PasswordInput = ({ label, name, value, setValue, password }) => {
       return null;
     }
 
-    console.log("Password is not undefine");
-
     const spans = document.getElementsByClassName("spans");
     const passwordInputs = document.getElementsByClassName("password");
 

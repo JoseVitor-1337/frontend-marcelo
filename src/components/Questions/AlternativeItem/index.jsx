@@ -4,7 +4,12 @@ import { TextInput, UploadInput, Select } from "../../Inputs";
 import "./style.css";
 
 const AlternativeItem = (props) => {
-  const { index, removeAlternative, alternative, setAlternatives } = props;
+  const {
+    index,
+    removeAlternative,
+    alternative,
+    changeValueIntoAlternatives,
+  } = props;
 
   return (
     <div className="alternative">
@@ -18,8 +23,9 @@ const AlternativeItem = (props) => {
           label="Correta?"
           index={index}
           options={["Sim", "Não"]}
+          id={`correct ${index}`}
           value={alternative.correct}
-          setValue={setAlternatives}
+          setValue={changeValueIntoAlternatives}
         />
 
         <TextInput
@@ -29,17 +35,17 @@ const AlternativeItem = (props) => {
           patter={"^{1}$"}
           index={index}
           value={alternative.option}
-          setValue={setAlternatives}
+          setValue={changeValueIntoAlternatives}
         />
       </div>
 
       <div className="group">
         <UploadInput
-          name="questionImage"
+          name="image"
           label="Clique para selecionar uma imagem para a resposta"
           index={index}
           value={alternative.image}
-          setValue={setAlternatives}
+          setValue={changeValueIntoAlternatives}
         />
 
         <TextInput
@@ -48,7 +54,7 @@ const AlternativeItem = (props) => {
           label="Resposta"
           index={index}
           value={alternative.answer}
-          setValue={setAlternatives}
+          setValue={changeValueIntoAlternatives}
         />
       </div>
     </div>

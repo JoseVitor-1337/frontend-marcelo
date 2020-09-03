@@ -78,6 +78,7 @@ form div.submit {
 
 form div.participant-submit {
   padding: 0.1rem 0.4rem;
+  margin: 0 0 1rem 0;
 }
 
 @media only screen and (max-width: 1025px) {
@@ -98,6 +99,7 @@ form div.participant-submit {
 
 @media only screen and (max-width: 450px) {
   div.register-container {
+    margin-top: 0;
     min-width: 28rem;
   }
 

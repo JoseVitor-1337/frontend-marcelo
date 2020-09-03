@@ -5,8 +5,24 @@ import "./style.css";
 
 import closeIcon from "../../../assets/icons/close.svg";
 
-const SearchDetailsModal = ({ closeModal, search }) => {
+const SearchDetailsModal = (props) => {
+  const { closeModal, search } = props;
+
   console.log(search);
+
+  const { title, description, researcher, participants, questions } = search;
+
+  const {
+    fullName,
+    course,
+    schooling,
+    univercityName,
+    univercityType,
+    state,
+    email,
+  } = researcher;
+
+  function calculateTheWrongPercent() {}
 
   return (
     <div className="search-details-modal">
@@ -21,32 +37,32 @@ const SearchDetailsModal = ({ closeModal, search }) => {
         <header>
           <img src={searchSVG} alt="Iconi de Pesquisa" />
           <div className="description">
-            <h2>Psícologia Reversa</h2>
-            <span>Uma breve descrição sobre a pesquisa trabalhada</span>
+            <h2>{title}</h2>
+            <span>{description}</span>
           </div>
         </header>
 
         <div className="modal-body">
           <div className="researcher-details">
             <h3>Pesquisador</h3>
-            <p>Professor(a): Wender Silva</p>
-            <p>Curso: Ciências da computação</p>
-            <p>Escolaridade: mestrado</p>
-            <p>Nome da univercidade: Univercidade Estadual de Roraima</p>
-            <p>Tipo da univercidade(a): Pública</p>
-            <p>Estado: Roraima</p>
-            <p>Email: wendersilva@gmail.com</p>
+            <p>Professor(a): {fullName}</p>
+            <p>Curso: {course}</p>
+            <p>Escolaridade: {schooling}</p>
+            <p>Nome da univercidade: {univercityName}</p>
+            <p>Tipo da univercidade(a): {univercityType}</p>
+            <p>Estado: {state}</p>
+            <p>Email: {email}</p>
           </div>
           <div className="search-details">
             <div className="search-info">
               <div className="circle">
-                <h2>87</h2>
+                <h2>{participants.length}</h2>
               </div>
               <span>Participantes</span>
             </div>
             <div className="search-info">
               <div className="circle">
-                <h2>20</h2>
+                <h2>{questions.length}</h2>
               </div>
               <span>Perguntas</span>
             </div>

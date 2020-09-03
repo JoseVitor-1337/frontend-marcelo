@@ -3,27 +3,29 @@ import searchSVG from "../../../assets/icons/search.svg";
 import "./style.css";
 
 const AdministerSearchItem = (props) => {
-  const { openDetailModal } = props;
+  const { openDetailModal, search } = props;
+
+  const { title, description, researcher } = search;
+
+  const { fullName, course, schooling } = researcher;
 
   return (
     <div className="search-item">
       <header>
         <img src={searchSVG} alt="Iconi de Pesquisa" />
         <div className="description">
-          <h2>Psícologia Reversa</h2>
-          <span>Uma breve descrição sobre a pesquisa trabalhada</span>
+          <h2>{title}</h2>
+          <span>{description}</span>
         </div>
       </header>
       <div className="content">
         <div className="researcher-info">
-          <p>Professor(a): Wender Silva</p>
-          <p>Curso: Ciências da computação</p>
-          <p>Escolaridade: Pós-doutorado</p>
+          <p>Professor(a): {fullName}</p>
+          <p>Curso: Ciências {course}</p>
+          <p>Escolaridade: {schooling}</p>
         </div>
         <div className="details">
-          <button onClick={() => openDetailModal({ search: "Search" })}>
-            Ver Detalhes
-          </button>
+          <button onClick={() => openDetailModal(search)}>Ver Detalhes</button>
         </div>
       </div>
     </div>

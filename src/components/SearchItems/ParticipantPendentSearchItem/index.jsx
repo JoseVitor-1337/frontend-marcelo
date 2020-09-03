@@ -4,17 +4,33 @@ import searchSVG from "../../../assets/icons/search.svg";
 import "./style.css";
 
 const ParticipantPendentSearchItem = (props) => {
+  const { search } = props;
+
+  const { title, description, researcher } = search;
+
+  const { fullName, univercityName, course } = researcher;
+
+  function initSearchSession() {
+    console.log(search);
+  }
+
   return (
     <div className="participant-search search-item">
       <header>
         <img src={searchSVG} alt="Iconi de Pesquisa" />
         <div className="description">
-          <h2>Psícologia Reversa</h2>
-          <span>Uma breve descrição sobre a pesquisa trabalhada</span>
+          <h2>{title}</h2>
+          <span>{description}</span>
         </div>
       </header>
       <div className="pendent-search-content content">
-        <button>Iniciar Sessão</button>
+        <div className="info">
+          <p>Professor(a): {fullName}</p>
+          <p>Universidade: {univercityName}</p>
+          <p>Curso: {course}</p>
+        </div>
+
+        <button onClick={initSearchSession}>Iniciar Sessão</button>
       </div>
     </div>
   );

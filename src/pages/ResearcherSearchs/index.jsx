@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavigationHeader } from "../../components/Navigation";
 import { SearchInput } from "../../components/Inputs";
 import { Pagination } from "../../components/Paginations";
@@ -18,6 +18,10 @@ const ResearcherSearchs = () => {
     setAddParticipantIntoSearchModalIsOpen(true);
     setSearchId(searchId);
   }
+
+  useEffect(() => {
+    console.log(filter);
+  }, [filter]);
 
   const navigationItems = [
     {

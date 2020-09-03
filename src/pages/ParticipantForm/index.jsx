@@ -9,7 +9,7 @@ const ParticipantForm = () => {
   const navigation = useHistory();
 
   const [name, setName] = useState("");
-  const [age, setAge] = useState("");
+  const [dateOfBirth, setDateOfBirth] = useState("");
   const [univercityName, setUnivercityName] = useState("");
   const [email, setEmail] = useState("");
   const [course, setCourse] = useState("");
@@ -66,7 +66,7 @@ const ParticipantForm = () => {
 
     console.log({
       name,
-      age,
+      dateOfBirth,
       selectedSex,
       course,
       email,
@@ -91,9 +91,9 @@ const ParticipantForm = () => {
       <form onSubmit={registerNewParticipant} autoComplete="Off">
         <div className="first-form-group">
           <TextInput
-            type="name"
             name="name"
             label="Nome completo"
+            pattern="^[a-zA-Z][^0-9]{2,}$"
             value={name}
             setValue={setName}
           />
@@ -131,11 +131,11 @@ const ParticipantForm = () => {
 
           <div className="form-select-group">
             <TextInput
-              name="age"
-              pattern="^[1-9]{1}[0-9]{0,1}$"
-              value={age}
-              setValue={setAge}
-              label="Idade"
+              name="dateOfBirth"
+              pattern="^[0-9]{2}[/][0-9]{2}[/][0-9]{4}$"
+              value={dateOfBirth}
+              setValue={setDateOfBirth}
+              label="Data de nascimento"
             />
             <Select
               name="sex"
@@ -165,7 +165,7 @@ const ParticipantForm = () => {
           <TextInput
             value={email}
             setValue={setEmail}
-            pattern="^([0-9a-zA-Z]+([_.-]?[0-9a-zA-Z]+)*@[0-9a-zA-Z]+[0-9,a-z,A-Z,.,-]*(.){1}[a-zA-Z]{2,4})+$"
+            pattern="^[\d\D]{4,}[@][a-z]{2,}[.][a-z]{2,}$"
             name="email"
             label="Email"
           />

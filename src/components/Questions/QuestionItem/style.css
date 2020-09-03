@@ -1,3 +1,7 @@
+.question-form {
+  padding: 1rem;
+}
+
 .question-form div.configurations {
   display: flex;
   align-items: center;
@@ -24,4 +28,16 @@
 
 #hidden {
   display: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .question-form {
+    padding: 0.5rem;
+  }
+  .question-form button {
+    width: 100%;
+    padding: 1rem 0.5rem;
+    font-size: 0.8rem;
+    border: 0.2rem solid var(--secondary-color);
+  }
 }

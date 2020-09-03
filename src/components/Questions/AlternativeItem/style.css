@@ -11,16 +11,18 @@
   color: var(--secondary-color);
 
   display: flex;
-  align-items: flex-start;
+
   justify-content: space-between;
 }
 
 .alternative .alternative-header h3 {
-  font-size: 1.8rem;
+  width: 60%;
+  font-size: 1.6rem;
   font-weight: bold;
 }
 
 .alternative .alternative-header button {
+  width: 20%;
   border: 0.2rem solid var(--secondary-color);
 }
 
@@ -33,4 +35,33 @@
   display: grid;
   grid-template-columns: 49% 49%;
   gap: 2%;
+}
+
+@media only screen and (max-width: 1100px) {
+  .alternative .alternative-header {
+    padding: 0.5rem;
+    align-items: center;
+  }
+
+  .alternative-group {
+    display: block;
+  }
+
+  .alternative .alternative-header h3 {
+    width: 70%;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+  .alternative .alternative-header button {
+    width: 40%;
+    font-size: 1rem;
+    border: 0.2rem solid var(--secondary-color);
+    margin-bottom: 0;
+  }
+
+  .alternative-group,
+  .group {
+    padding: 0.5rem;
+  }
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavigationHeader } from "../../components/Navigation";
 import { SearchInput } from "../../components/Inputs";
 import { Pagination } from "../../components/Paginations";
@@ -7,10 +7,44 @@ import { SearchDetailsModal } from "../../components/Modals";
 import "./style.css";
 
 const ParticipantCompletSearchs = () => {
+  const [searchs, setSearchs] = useState([]);
   const [filter, setFilter] = useState(``);
   const [searchDetailModalIsOpent, setSearchDetailModalIsOpent] = useState(
     false
   );
+
+  useEffect(() => {
+    setSearchs([
+      {
+        title: "Psicologia Reversa",
+        description: "Uma breve descrição sobre a pesquisa trabalhada",
+        content: "Aqui estará o conteudo que a pesquisa aborda",
+        questions: [0, 1, 2, 3, 5],
+        participantStatus: {
+          participantId: "1",
+          answeredQuestions: [
+            {
+              numberOfQuestion: 1,
+              correct: 0,
+              answer: "Alo Você",
+            },
+            {
+              numberOfQuestion: 2,
+              correct: 1,
+              answer: "Você",
+            },
+            {
+              numberOfQuestion: 3,
+              correct: 0,
+              answer: "Alo ",
+            },
+          ],
+          status: "Complete",
+          attempts: 1,
+        },
+      },
+    ]);
+  }, []);
 
   const navigationItems = [
     {
@@ -39,10 +73,11 @@ const ParticipantCompletSearchs = () => {
             setValue={setFilter}
           />
           <div className=" searchs-item-container">
-            <ParticipantCompletSearchItem />
-            <ParticipantCompletSearchItem />
-            <ParticipantCompletSearchItem />
-            <ParticipantCompletSearchItem />
+            {searchs.map((search, index) => {
+              return (
+                <ParticipantCompletSearchItem key={index} search={search} />
+              );
+            })}
           </div>
           <Pagination maxItems={40} itemsPerPage={4} />
         </>

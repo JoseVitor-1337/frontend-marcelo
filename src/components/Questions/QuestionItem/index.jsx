@@ -5,15 +5,19 @@ import { TextInput } from "../../Inputs";
 import "./style.css";
 
 const QuestionItem = (props) => {
-  const { questions, setQuestions, selectedIndex, index } = props;
+  const {
+    questions,
+    setQuestions,
+    selectedIndex,
+    index,
+    openModalToPreviewTheQuestion,
+  } = props;
 
   function createNewAlternative() {
-    console.log(questions);
-
     questions[selectedIndex].alternatives = [
       ...questions[selectedIndex].alternatives,
       {
-        corret: "",
+        correct: "",
         option: "",
         answer: "",
         image: "",
@@ -49,7 +53,7 @@ const QuestionItem = (props) => {
     );
   }
 
-  function setAlternatives(value, property, alternativeIndex) {
+  function changeValueIntoAlternatives(value, property, alternativeIndex) {
     setQuestions(
       questions.map((question, index) => {
         if (index === selectedIndex) {
@@ -74,7 +78,7 @@ const QuestionItem = (props) => {
     );
   }
 
-  function setQuestion(value, property) {
+  function changeValueIntoQuestion(value, property) {
     setQuestions(
       questions.map((item, index) => {
         if (selectedIndex === index) {
@@ -89,6 +93,11 @@ const QuestionItem = (props) => {
     );
   }
 
+  function createQuestion() {
+    console.log("Create");
+    console.log(questions);
+  }
+
   return (
     <div
       id={`${index === selectedIndex ? "show" : "hidden"}`}
@@ -96,7 +105,9 @@ const QuestionItem = (props) => {
     >
       <div className="configurations">
         <button onClick={() => removeQuestions(index)}>Remover Pergunta</button>
-        <button>Visualizar Pergunta</button>
+        <button onClick={openModalToPreviewTheQuestion}>
+          Visualizar Pergunta
+        </button>
       </div>
 
       <TextInput
@@ -104,7 +115,7 @@ const QuestionItem = (props) => {
         id={`type ${index}`}
         label="Tipo da pergunta"
         value={questions[selectedIndex].type}
-        setValue={setQuestion}
+        setValue={changeValueIntoQuestion}
       />
 
       <TextInput
@@ -112,21 +123,21 @@ const QuestionItem = (props) => {
         id={`structure ${index}`}
         label="Estrutura"
         value={questions[selectedIndex].structure}
-        setValue={setQuestion}
+        setValue={changeValueIntoQuestion}
       />
       <TextInput
         name="stimulus"
         label="Estímulo da pergunta"
         id={`stimulus ${index}`}
         value={questions[selectedIndex].stimulus}
-        setValue={setQuestion}
+        setValue={changeValueIntoQuestion}
       />
       <TextInput
         name="question"
         id={`question ${index}`}
         label="Faça a Pergunta"
         value={questions[selectedIndex].question}
-        setValue={setQuestion}
+        setValue={changeValueIntoQuestion}
       />
 
       <button onClick={() => createNewAlternative(selectedIndex)}>
@@ -140,12 +151,14 @@ const QuestionItem = (props) => {
             index={index}
             removeAlternative={removeAlternative}
             alternative={alternative}
-            setAlternatives={setAlternatives}
+            changeValueIntoAlternatives={changeValueIntoAlternatives}
           />
         );
       })}
 
-      <button className="create">Criar pergunta</button>
+      <button onClick={createQuestion} className="create">
+        Criar pergunta
+      </button>
     </div>
   );
 };

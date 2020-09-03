@@ -1,10 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { QuestionItem } from "../../components/Questions";
 import { TextInput, Textarea, Select } from "../../components/Inputs";
+import { PreviewQuestionModal } from "../../components/Modals";
 
 import "./style.css";
 
 const CreateSearch = () => {
+  const [questionInfoToModal, setQuestionInfoToModal] = useState({});
+  const [openPreviewQuestionModal, setOpenPreviewQuestionModal] = useState(
+    false
+  );
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const [title, setTitle] = useState("");
@@ -23,7 +28,7 @@ const CreateSearch = () => {
       question: "",
       alternatives: [
         {
-          corret: "",
+          correct: "",
           option: "",
           answer: "",
           image: "",
@@ -50,7 +55,7 @@ const CreateSearch = () => {
     setSelectedIndex(questionIndex);
   }
 
-  function createNewQuestion() {
+  function createNewQuestionField() {
     setQuestions([
       ...questions,
       {
@@ -60,7 +65,7 @@ const CreateSearch = () => {
         question: "",
         alternatives: [
           {
-            corret: "",
+            correct: "",
             option: "",
             answer: "",
             image: "",
@@ -70,119 +75,141 @@ const CreateSearch = () => {
     ]);
   }
 
+  function openModalToPreviewTheQuestion(question) {
+    setOpenPreviewQuestionModal(true);
+    setQuestionInfoToModal(question);
+  }
+
+  useEffect(() => {}, []);
+
   return (
     <>
-      <div className="search-config">
-        <header>
-          <h2>Configurações da Pesquisa</h2>
-        </header>
+      {openPreviewQuestionModal !== true ? (
+        <>
+          <div className="search-config">
+            <header>
+              <h2>Configurações da Pesquisa</h2>
+            </header>
 
-        <form onSubmit={createSearchConfig}>
-          <div className="first-form-group">
-            <TextInput
-              name="searchType"
-              pattern={".{4,}"}
-              label="Tipo"
-              value={type}
-              setValue={setType}
-            />
+            <form onSubmit={createSearchConfig}>
+              <div className="first-form-group">
+                <TextInput
+                  name="searchType"
+                  pattern={".{4,}"}
+                  label="Tipo"
+                  value={type}
+                  setValue={setType}
+                />
 
-            <TextInput
-              name="title"
-              label="Título"
-              pattern={".{4,}"}
-              value={title}
-              setValue={setTitle}
-            />
+                <TextInput
+                  name="title"
+                  label="Título"
+                  pattern={".{4,}"}
+                  value={title}
+                  setValue={setTitle}
+                />
 
-            <TextInput
-              name="content"
-              label="Conteúdo"
-              pattern={".{4,}"}
-              value={content}
-              setValue={setContent}
-            />
+                <TextInput
+                  name="content"
+                  label="Conteúdo"
+                  pattern={".{4,}"}
+                  value={content}
+                  setValue={setContent}
+                />
 
-            <Textarea
-              name="description"
-              label="Descrição"
-              value={description}
-              setValue={setDescription}
-            />
+                <TextInput
+                  name="retries"
+                  pattern={"^[0-9]{1}$"}
+                  label="Retentativas"
+                  value={retries}
+                  setValue={setRetries}
+                />
 
-            <TextInput
-              name="retries"
-              pattern={"^[0-9]{1}$"}
-              label="Retentativas"
-              value={retries}
-              setValue={setRetries}
-            />
+                <div className="mts-group">
+                  <Select
+                    name="mts"
+                    label="MTS"
+                    options={["Atrasado", "Simultâneo"]}
+                    value={MTS}
+                    setValue={setMTS}
+                  />
 
-            <div className="mts-group">
-              <Select
-                name="mts"
-                label="MTS"
-                options={["Atrasado", "Simultâneo"]}
-                value={MTS}
-                setValue={setMTS}
-              />
+                  <TextInput
+                    name="interval"
+                    label="Intervalo"
+                    pattern={"^[0-9]{1}$"}
+                    disabled={MTS === "Simultâneo" ? true : null}
+                    value={interval}
+                    setValue={setInterval}
+                  />
+                </div>
 
-              <TextInput
-                name="interval"
-                label="Intervalo"
-                pattern={"^[0-9]{1}$"}
-                disabled={MTS === "Simultâneo" ? true : null}
-                value={interval}
-                setValue={setInterval}
-              />
+                <Textarea
+                  name="description"
+                  label="Descrição"
+                  value={description}
+                  setValue={setDescription}
+                />
+              </div>
+
+              <button className="submit" type="submit">
+                Criar Pesquisa
+              </button>
+            </form>
+          </div>
+
+          <div className="search-questions">
+            <header>
+              <h2>Perguntas da Pesquisa</h2>
+            </header>
+
+            <div className="questions-content">
+              <div className="question-menu">
+                <button
+                  onClick={createNewQuestionField}
+                  className="new-question"
+                >
+                  Criar nova pergunta
+                </button>
+
+                {questions.map((question, index) => {
+                  const questionName = `${index + 1} Pergunta`;
+
+                  return (
+                    <button
+                      onClick={() => selectQuestion(index)}
+                      key={index}
+                      className="question"
+                    >
+                      {questionName}
+                    </button>
+                  );
+                })}
+              </div>
+
+              {questions.map((question, index) => {
+                return (
+                  <QuestionItem
+                    openModalToPreviewTheQuestion={() =>
+                      openModalToPreviewTheQuestion(question)
+                    }
+                    index={selectedIndex}
+                    selectedIndex={index}
+                    key={index}
+                    questions={questions}
+                    setQuestions={setQuestions}
+                  />
+                );
+              })}
             </div>
           </div>
-
-          <button className="submit" type="submit">
-            Criar Pesquisa
-          </button>
-        </form>
-      </div>
-
-      <div className="search-questions">
-        <header>
-          <h2>Perguntas da Pesquisa</h2>
-        </header>
-
-        <div className="questions-content">
-          <div className="question-menu">
-            <button onClick={createNewQuestion} className="new-question">
-              Criar nova pergunta
-            </button>
-
-            {questions.map((question, index) => {
-              const questionName = `${index + 1} Pergunta`;
-
-              return (
-                <button
-                  onClick={() => selectQuestion(index)}
-                  key={index}
-                  className="question"
-                >
-                  {questionName}
-                </button>
-              );
-            })}
-          </div>
-
-          {questions.map((question, index) => {
-            return (
-              <QuestionItem
-                index={selectedIndex}
-                selectedIndex={index}
-                key={index}
-                questions={questions}
-                setQuestions={setQuestions}
-              />
-            );
-          })}
-        </div>
-      </div>
+        </>
+      ) : (
+        <PreviewQuestionModal
+          questions={questionInfoToModal}
+          closeModal={setOpenPreviewQuestionModal}
+        />
+      )}
     </>
   );
 };
