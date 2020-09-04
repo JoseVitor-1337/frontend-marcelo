@@ -70,9 +70,10 @@ const ResearcherSearchs = () => {
             setValue={setFilter}
           />
           <div className="searchs-item-container">
-            {searchs.map((search) => {
+            {searchs.map((search, index) => {
               return (
                 <ResearcherSearchItem
+                  key={index}
                   search={search}
                   openModal={openAddParticipantIntoSearchModal}
                 />

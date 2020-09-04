@@ -25,7 +25,7 @@ const ResearcherSearchItem = (props) => {
           <span>{description}</span>
         </div>
       </header>
-      <div className="researcher-content content">
+      <div className="researcher-content conten t">
         <button onClick={() => openModal("ID")} className="circle">
           Adicionar estudante
         </button>

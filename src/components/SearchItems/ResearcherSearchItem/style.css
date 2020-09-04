@@ -10,6 +10,7 @@
 
 div.researcher-content {
   padding: 0.5rem;
+  display: flex;
   justify-content: space-around;
 }
 
