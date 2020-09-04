@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavigationHeader } from "../../components/Navigation";
 import { SearchInput } from "../../components/Inputs";
-import { Pagination } from "../../components/Paginations";
+import { PaginationSearchItems } from "../../components/Paginations";
 import { ParticipantPendentSearchItem } from "../../components/SearchItems";
 import { SearchDetailsModal } from "../../components/Modals";
 import "./style.css";
@@ -77,7 +77,7 @@ const ParticipantPendentSearchs = () => {
               );
             })}
           </div>
-          <Pagination maxItems={40} itemsPerPage={4} />
+          <PaginationSearchItems maxItems={40} itemsPerPage={4} />
         </>
       ) : (
         <SearchDetailsModal closeModal={setSearchDetailModalIsOpent} />

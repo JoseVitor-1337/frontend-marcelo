@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import AlternativeItem from "../AlternativeItem";
+import AlternativeOfQuestionItem from "../AlternativeOfQuestionItem";
 import { TextInput } from "../../Inputs";
 
 import "./style.css";
@@ -146,7 +146,7 @@ const QuestionItem = (props) => {
 
       {questions[selectedIndex].alternatives.map((alternative, index) => {
         return (
-          <AlternativeItem
+          <AlternativeOfQuestionItem
             key={index}
             index={index}
             removeAlternative={removeAlternative}

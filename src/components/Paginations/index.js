@@ -1,3 +1,4 @@
-import Pagination from "./Pagination";
+import PaginationSearchItems from "./PartipantItem";
+import SessionQuestionItem from "./SessionQuestionItem";
 
-export { Pagination };
+export { PaginationSearchItems, SessionQuestionItem };
