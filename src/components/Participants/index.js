@@ -1,3 +1,3 @@
-import PartipantItem from "./PartipantItem";
+import ParticipantItem from "./ParticipantItem";
 
-export { PartipantItem };
+export { ParticipantItem };

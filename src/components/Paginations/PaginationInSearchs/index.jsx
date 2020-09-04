@@ -2,7 +2,7 @@ import React, { useEffect, useState, memo } from "react";
 
 import "./style.css";
 
-const Pagination = (props) => {
+const PaginationInSearchs = (props) => {
   const { maxItems, itemsPerPage } = props;
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -77,4 +77,4 @@ const Pagination = (props) => {
   );
 };
 
-export default memo(Pagination);
+export default memo(PaginationInSearchs);

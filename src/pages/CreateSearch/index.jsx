@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { QuestionItem } from "../../components/Questions";
+import { NavigationHeader } from "../../components/Navigation";
 import { TextInput, Textarea, Select } from "../../components/Inputs";
 import { PreviewQuestionModal } from "../../components/Modals";
 
@@ -80,12 +81,28 @@ const CreateSearch = () => {
     setQuestionInfoToModal(question);
   }
 
+  const navigationItems = [
+    {
+      to: "/researcher/searchs",
+      title: "Pesquisas",
+    },
+    {
+      to: "/researcher/create",
+      title: "Criar Pesquisa",
+    },
+    {
+      to: "/",
+      title: "Sair",
+    },
+  ];
+
   useEffect(() => {}, []);
 
   return (
     <>
       {openPreviewQuestionModal !== true ? (
         <>
+          <NavigationHeader items={navigationItems} />
           <div className="search-config">
             <header>
               <h2>Configurações da Pesquisa</h2>

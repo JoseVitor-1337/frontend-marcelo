@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { NavigationHeader } from "../../components/Navigation";
 import { SearchInput } from "../../components/Inputs";
-import { PaginationSearchItems } from "../../components/Paginations";
+import { PaginationInSearchs } from "../../components/Paginations";
 import { ResearcherSearchItem } from "../../components/SearchItems";
 import { AddParticipantIntoSearchModal } from "../../components/Modals";
 import "./style.css";
 
 const ResearcherSearchs = () => {
+  const [searchs, setSearchs] = useState([]);
   const [filter, setFilter] = useState(``);
   const [searchId, setSearchId] = useState("");
   const [
@@ -22,6 +23,25 @@ const ResearcherSearchs = () => {
   useEffect(() => {
     console.log(filter);
   }, [filter]);
+
+  useEffect(() => {
+    setSearchs([
+      {
+        researcher: "1",
+        title: "Psicologia Reversa",
+        description: "Uma breve descrição sobre a pesquisa trabalhada",
+        status: [
+          {
+            participant: "1",
+            answeredQuestions: Array(10).fill(0),
+            attempts: 1,
+          },
+        ],
+        participants: Array(87).fill(0),
+        questions: Array(10).fill(0),
+      },
+    ]);
+  }, []);
 
   const navigationItems = [
     {
@@ -50,20 +70,16 @@ const ResearcherSearchs = () => {
             setValue={setFilter}
           />
           <div className="searchs-item-container">
-            <ResearcherSearchItem
-              openModal={openAddParticipantIntoSearchModal}
-            />
-            <ResearcherSearchItem
-              openModal={openAddParticipantIntoSearchModal}
-            />
-            <ResearcherSearchItem
-              openModal={openAddParticipantIntoSearchModal}
-            />
-            <ResearcherSearchItem
-              openModal={openAddParticipantIntoSearchModal}
-            />
+            {searchs.map((search) => {
+              return (
+                <ResearcherSearchItem
+                  search={search}
+                  openModal={openAddParticipantIntoSearchModal}
+                />
+              );
+            })}
           </div>
-          <PaginationSearchItems maxItems={40} itemsPerPage={4} />
+          <PaginationInSearchs maxItems={40} itemsPerPage={4} />
         </>
       ) : (
         <AddParticipantIntoSearchModal

@@ -5,7 +5,10 @@ import "./style.css";
 
 const ResearcherSearchItem = (props) => {
   const navigation = useHistory();
-  const { openModal } = props;
+
+  const { openModal, search } = props;
+
+  const { title, description, participants } = search;
 
   function handleUpdateSearch() {
     // Passar ID
@@ -18,21 +21,21 @@ const ResearcherSearchItem = (props) => {
       <header>
         <img src={searchSVG} alt="Iconi de Pesquisa" />
         <div className="description">
-          <h2>Psícologia Reversa</h2>
-          <span>Uma breve descrição sobre a pesquisa trabalhada</span>
+          <h2>{title}</h2>
+          <span>{description}</span>
         </div>
       </header>
       <div className="researcher-content content">
         <button onClick={() => openModal("ID")} className="circle">
           Adicionar estudante
         </button>
-        <button className="circle">Abrir sessão</button>
+
         <button onClick={handleUpdateSearch} className="circle">
           Editar pesquisa
         </button>
         <div className="search-info">
           <div className="circle">
-            <h2>27</h2>
+            <h2>{participants.length}</h2>
           </div>
           <p>Participantes</p>
         </div>

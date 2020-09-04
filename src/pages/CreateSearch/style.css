@@ -41,11 +41,11 @@
 
 .search-questions {
   padding: 1rem 0.5rem;
-  width: 60vw;
+  width: 65vw;
   background-color: var(--secondary-color);
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   border: 0.1rem solid var(--secondary-color);
-  margin: 1rem 0;
+  margin: 1rem auto;
 }
 
 .search-questions header {
@@ -69,6 +69,10 @@
   grid-template-columns: 25% 75%;
 }
 
+.questions-content {
+  border-radius: 1rem;
+}
+
 .questions-content .question-menu {
   background-color: var(--primary-color);
 
@@ -90,9 +94,6 @@
   font-size: 1rem;
   border: 0.2rem solid var(--secondary-color);
 }
-uestions-content .question-preview {
-  background-color: black;
-}
 
 .question-form button:hover,
 .question-menu button:hover {
@@ -100,19 +101,19 @@ uestions-content .question-preview {
   color: var(--primary-color);
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 900px) {
   .search-questions {
     border-radius: 0;
     margin-top: 5rem;
-    width: 80vw;
+    width: 85vw;
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 600px) {
   .search-config {
     width: 100vw;
     border-radius: 0;
-    margin: 0;
+    margin-top: 3rem;
   }
 
   .search-config header h2 {
@@ -124,10 +125,13 @@ uestions-content .question-preview {
     display: block;
   }
 
+  .question-menu {
+    width: 100%;
+  }
+
   .question-menu button {
     width: 100%;
     font-size: 0.8rem;
-    border: 0.2rem solid var(--secondary-color);
   }
 
   .search-questions .questions-content {
@@ -139,18 +143,7 @@ uestions-content .question-preview {
 
   .search-questions {
     border-radius: 0;
-    margin-top: 5rem;
+    margin-top: 3rem;
     width: 100vw;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .search-config header h2 {
-    text-align: center;
-  }
-  .search-config {
-    width: 100vw;
-    border-radius: 0;
-    margin: 0;
   }
 }

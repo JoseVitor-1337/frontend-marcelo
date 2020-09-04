@@ -27,40 +27,40 @@
   margin-right: 1rem;
 }
 
-.participant-item header div.description {
+.participant-item header .description {
   text-align: left;
   color: var(--secondary-color);
 }
 
-.participant-item header div.description h2 {
+.participant-item header .description h2 {
   font-weight: bold;
   font-size: 1.2rem;
 }
 
-.participant-item header div.description p {
+.participant-item header .description p {
   font-weight: normal;
   opacity: 0.8;
   font-size: 0.8rem;
 }
 
-.participant-item div.content {
+.participant-item .content {
   display: flex;
 }
 
-.participant-item div.content div.participant-info {
+.participant-item .content .participant-info {
   padding: 0.5rem;
   text-align: left;
   width: 70%;
 }
 
-.participant-item div.content div.participant-info p {
+.participant-item .content .participant-info p {
   font-size: 0.8rem;
   font-weight: 600;
   color: var(--primary-color);
   margin-bottom: 0.5rem;
 }
 
-.participant-item div.content div.details {
+.participant-item .content .details {
   width: 30%;
 
   display: flex;
@@ -68,10 +68,15 @@
   justify-content: center;
 }
 
-.participant-item div.content div.details img {
+.participant-item .content .details img {
   width: 5rem;
   height: 5rem;
   cursor: pointer;
+  transition: filter 0.5s;
+}
+
+.participant-item .content .details img:hover {
+  filter: brightness(0.75);
 }
 
 @media only screen and (max-width: 500px) {

@@ -1,4 +1,4 @@
-div.search-details-modal {
+.search-details-modal {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,13 +7,13 @@ div.search-details-modal {
   margin: 2rem auto;
 }
 
-div.search-details-modal header {
+.search-details-modal header {
   display: flex;
   align-items: center;
   margin-bottom: 1.5rem;
 }
 
-div.search-details-modal img.close-icon {
+.search-details-modal img.close-icon {
   width: 3rem;
   height: 3rem;
 
@@ -21,42 +21,42 @@ div.search-details-modal img.close-icon {
   right: -1.2rem;
 }
 
-div.search-details-modal header img {
+.search-details-modal header img {
   width: 7rem;
   height: 7rem;
   margin-right: 1rem;
 }
 
-div.search-details-modal header .description {
+.search-details-modal header .description {
   padding: 1rem;
   text-align: left;
 }
 
-div.search-details-modal header .description h2 {
+.search-details-modal header .description h2 {
   font-size: 2.2rem;
   color: var(--primary-color);
   font-weight: 700;
 }
 
-div.search-details-modal header .description span {
+.search-details-modal header .description span {
   font-size: 1.2rem;
   color: var(--primary-color);
   font-weight: 400;
 }
 
-div.search-details-modal div.modal-body {
+.search-details-modal .modal-body {
   display: flex;
   flex-wrap: wrap;
 }
 
-div.search-details-modal div.researcher-details {
+.search-details-modal .researcher-details {
   background-color: var(--primary-color);
   padding: 0.8rem;
   border-radius: 1rem;
   margin-right: 1.5rem;
 }
 
-div.search-details-modal div.researcher-details h3 {
+.search-details-modal .researcher-details h3 {
   text-align: center;
   font-size: 2rem;
   color: var(--text-secondary-color);
@@ -64,14 +64,14 @@ div.search-details-modal div.researcher-details h3 {
   margin-bottom: 2rem;
 }
 
-div.researcher-details p {
+.researcher-details p {
   text-align: justify;
   font-size: 1.2rem;
   color: var(--text-secondary-color);
   margin-bottom: 1.6rem;
 }
 
-div.search-details {
+.search-details {
   border-radius: 1rem;
   padding: 0 0.5rem;
 
@@ -82,7 +82,7 @@ div.search-details {
   justify-content: space-between;
 }
 
-div.search-details button {
+.search-details-modal .modal-body .search-details button {
   width: 100%;
   padding: 1rem;
   border-radius: 1rem;
@@ -91,13 +91,13 @@ div.search-details button {
   border: 0.2rem solid var(--text-secondary-color);
 }
 
-div.search-details button:hover {
+.search-details-modal .modal-body .search-details button:hover {
   background-color: var(--text-secondary-color);
   color: var(--primary-color);
   border: 0.2rem solid var(--primary-color);
 }
 
-div.search-details div.search-info {
+.search-details .search-info {
   width: 8rem;
   padding: 1.2rem;
 
@@ -107,7 +107,7 @@ div.search-details div.search-info {
   justify-content: center;
 }
 
-div.search-details div.search-info div.circle {
+.search-details .search-info .circle {
   background-color: var(--primary-color);
   padding: 1.5rem;
   width: 6.5rem;
@@ -120,50 +120,50 @@ div.search-details div.search-info div.circle {
   justify-content: center;
 }
 
-div.search-details div.search-info div.circle h2 {
+.search-details .search-info .circle h2 {
   font-size: 2rem;
   color: var(--text-secondary-color);
 }
 
-div.search-details div.search-info span {
+.search-details .search-info span {
   font-size: 1.2rem;
   font-weight: 500;
   color: var(--primary-color);
 }
 
 @media only screen and (max-width: 850px) {
-  div.search-details-modal {
+  .search-details-modal {
     width: 95%;
     margin: 3rem auto;
   }
 
-  div.search-details-modal div.modal-body {
+  .search-details-modal .modal-body {
     align-items: center;
     justify-content: center;
   }
 
-  div.researcher-details {
+  .researcher-details {
     margin-right: 0;
   }
 
-  div.search-details,
-  div.researcher-details {
+  .search-details,
+  .researcher-details {
     width: 70%;
   }
 }
 
 @media only screen and (max-width: 650px) {
-  div.search-details-modal header .description {
+  .search-details-modal header .description {
     padding: 0;
   }
 
-  div.search-details-modal header .description h2 {
+  .search-details-modal header .description h2 {
     font-size: 1.8rem;
     color: var(--text-primary-color);
     font-weight: 700;
   }
-  div.search-details,
-  div.researcher-details {
+  .search-details,
+  .researcher-details {
     width: 100%;
     margin-right: 0 !important;
   }

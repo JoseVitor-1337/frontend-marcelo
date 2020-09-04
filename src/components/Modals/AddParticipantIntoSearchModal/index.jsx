@@ -1,5 +1,5 @@
 import React, { useState, memo } from "react";
-import { Pagination } from "../../Paginations";
+import { PaginationInSearchs } from "../../Paginations";
 import { ParticipantItem } from "../../Participants";
 import { SearchInput } from "../../Inputs";
 import "./style.css";
@@ -44,7 +44,7 @@ const AddParticipantIntoSearchModal = ({ closeModal, searchId }) => {
           <ParticipantItem />
         </div>
 
-        <Pagination maxItems={40} itemsPerPage={4} />
+        <PaginationInSearchs maxItems={40} itemsPerPage={4} />
       </div>
     </div>
   );

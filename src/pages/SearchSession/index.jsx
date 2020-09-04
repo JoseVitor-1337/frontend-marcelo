@@ -1,13 +1,24 @@
 import React, { useEffect, useState } from "react";
+import { PaginationOnSearchSession } from "../../components/Paginations";
 
 import "./style.css";
 
-const SearchSession = (props) => {
-  const [sessionQuestion, setSessionQuestions] = useState();
+const SearchSession = () => {
+  const [sessionQuestions, setSessionQuestions] = useState();
 
   useEffect(() => {}, []);
 
-  return <div></div>;
+  return (
+    <div className="sesseion-search-container">
+      <div className="question">
+        <p>Oh Hello There</p>
+      </div>
+      <div className="question-config">
+        <PaginationOnSearchSession />
+        <button className="end-session"></button>
+      </div>
+    </div>
+  );
 };
 
 export default SearchSession;

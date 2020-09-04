@@ -11,9 +11,9 @@ nav {
 nav a {
   display: inline-block;
   height: 3rem;
-  width: 10%;
+  width: 12%;
   text-decoration: none;
-  border-left: 0.01rem solid var(--primary-color);
+
   color: var(--primary-color);
   font-size: 1.1rem;
   font-weight: 550;
@@ -29,6 +29,12 @@ nav a {
 nav a:hover {
   color: var(--text-secondary-color);
   background-color: var(--primary-color);
+}
+
+@media only screen and (max-width: 900px) {
+  nav a {
+    width: 20%;
+  }
 }
 
 @media only screen and (max-width: 450px) {
