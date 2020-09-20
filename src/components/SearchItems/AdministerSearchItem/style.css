@@ -82,6 +82,7 @@ div.search-item div.content div.details button:hover {
   background-color: var(--text-secondary-color);
   border: 0.2rem solid var(--primary-color);
 }
+
 @media only screen and (max-width: 1100px) {
   div.search-item {
     width: 45%;
@@ -91,7 +92,7 @@ div.search-item div.content div.details button:hover {
 @media only screen and (max-width: 650px) {
   div.search-item {
     width: 100%;
-    margin: 2rem 0;
+    margin: 1rem 0;
   }
 
   div.search-item div.content div.details button {

@@ -1,50 +1,8 @@
-button.submit {
-  position: relative;
-  text-transform: uppercase;
-  color: var(--text-secondary-color);
-  background-color: var(--primary-color);
-  padding: 0.6rem;
-  border-radius: 0.2rem;
-  width: 100%;
-  font-weight: 700;
-  font-size: 1.1rem;
-  overflow: hidden;
-  cursor: pointer;
-  transition: 0.5s;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-button.submit:hover {
-  background-color: var(--primary-color-hover);
-}
-
-button.submit + button.submit {
-  margin-left: 0.4rem;
-}
-
-button.submit::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, #fff, transparent);
-  transition: 0.5s;
-}
-
-button.submit:hover::before {
-  left: 100%;
-}
-
 div.login-form {
-  margin-top: 5rem;
+  margin: 5rem auto 0 auto;
   position: relative;
   background-color: var(--secondary-color);
-  min-width: 30rem;
+  width: 50%;
   padding: 0.4rem 0.5rem;
   border-radius: 0.4rem;
 
@@ -77,9 +35,47 @@ div.login-form .buttons {
   display: flex;
 }
 
-@media only screen and (max-width: 450px) {
+div.login-form .buttons button {
+  position: relative;
+  color: var(--text-secondary-color);
+  background-color: var(--primary-color);
+  padding: 0.6rem;
+  border-radius: 0.2rem;
+  width: 100%;
+  overflow: hidden;
+  font-size: 1.1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.login-form .buttons button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #fff, transparent);
+  transition: 0.5s;
+}
+
+.buttons button + .buttons button {
+  margin-left: 0.4rem;
+}
+
+div.login-form .buttons button:hover {
+  background-color: var(--primary-color-hover);
+}
+
+div.login-form .buttons button:hover::before {
+  left: 100%;
+}
+
+@media only screen and (max-width: 600px) {
   div.login-form {
-    min-width: 28rem;
+    min-width: 100%;
     margin-top: 10rem;
     padding: 1rem;
   }

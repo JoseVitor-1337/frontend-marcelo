@@ -8,7 +8,7 @@ div.register-modal {
   z-index: 1;
 }
 
-div.modal-content {
+div.register-modal div.modal-content {
   position: relative;
   min-width: 35%;
   background-color: white;
@@ -17,6 +17,17 @@ div.modal-content {
 
   text-align: center;
   z-index: 1;
+}
+
+div.register-modal div.modal-content button {
+  text-transform: uppercase;
+  color: var(--text-secondary-color);
+  background-color: var(--primary-color);
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+  width: 100%;
+  font-size: 1rem;
+  border: 0.15rem solid var(--secondary-color);
 }
 
 img.close-icon {

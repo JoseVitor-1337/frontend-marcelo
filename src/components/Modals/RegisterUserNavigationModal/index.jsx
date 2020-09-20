@@ -31,12 +31,8 @@ const RegisterUserNavigationModal = ({ closeModal }) => {
         </div>
 
         <div className="modal-body">
-          <button onClick={goToParticipantRegister} className="navigation">
-            Participante
-          </button>
-          <button onClick={goToResearcherRegister} className="navigation">
-            Pesquisador
-          </button>
+          <button onClick={goToParticipantRegister}>Participante</button>
+          <button onClick={goToResearcherRegister}>Pesquisador</button>
         </div>
       </div>
     </div>

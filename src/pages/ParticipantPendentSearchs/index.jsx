@@ -42,7 +42,7 @@ const ParticipantPendentSearchs = () => {
         ],
       },
     ]);
-  }, [filter]);
+  }, []);
 
   const navigationItems = [
     {

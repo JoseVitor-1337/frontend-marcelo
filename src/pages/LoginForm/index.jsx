@@ -47,13 +47,8 @@ const LoginForm = () => {
           />
           <CheckBoxInput label="Manter-se conectado" />
           <div className="buttons">
-            <button className="submit" onClick={logIn}>
-              Login
-            </button>
-            <button
-              className="submit"
-              onClick={openRegisterUserNavigationModal}
-            >
+            <button onClick={logIn}>Login</button>
+            <button onClick={openRegisterUserNavigationModal}>
               Novo Cadastro
             </button>
           </div>

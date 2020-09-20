@@ -17,6 +17,11 @@
   margin-bottom: 1rem;
 }
 
+.question-form button:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
 .question-form button.create {
   margin: 1rem 0;
   text-transform: uppercase;

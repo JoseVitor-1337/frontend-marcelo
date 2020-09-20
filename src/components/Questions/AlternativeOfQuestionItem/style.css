@@ -5,7 +5,7 @@
 }
 
 .alternative .alternative-header {
-  padding: 0.5rem 1.5rem;
+  padding: 0.2rem 1rem;
   background-color: var(--primary-color);
   color: var(--secondary-color);
 
@@ -15,13 +15,13 @@
 }
 
 .alternative .alternative-header h3 {
-  width: 60%;
-  font-size: 1.8rem;
+  width: 50%;
+  font-size: 1.4rem;
   font-weight: bold;
 }
 
 .alternative .alternative-header button {
-  width: 30%;
+  width: 25%;
   border: 0.2rem solid var(--secondary-color);
 }
 
@@ -38,7 +38,7 @@
 
 @media only screen and (max-width: 900px) {
   .alternative .alternative-header {
-    padding: 1rem;
+    padding: 0.5rem;
   }
 
   .alternative-group {

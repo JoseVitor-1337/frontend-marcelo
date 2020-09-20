@@ -1,8 +1,8 @@
 .search-config {
-  padding: 1rem 0.5rem;
+  padding: 0.4rem;
   width: 50vw;
   background-color: var(--secondary-color);
-  border-radius: 0.5rem;
+
   border: 0.1rem solid var(--secondary-color);
   margin: 1rem auto 3rem auto;
 }
@@ -10,7 +10,7 @@
 .search-config header {
   padding: 0.8rem;
   background-color: var(--primary-color);
-  border-radius: 0.8rem;
+  border-radius: 0.5rem;
   margin-bottom: 1rem;
 }
 
@@ -29,6 +29,26 @@
   flex-wrap: wrap;
 }
 
+.search-config form button {
+  position: relative;
+  color: var(--text-secondary-color);
+  background-color: var(--primary-color);
+  border: 0.1rem solid var(--primary-color);
+  padding: 0.6rem;
+  border-radius: 0.2rem;
+  width: 100%;
+  font-size: 1.1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-config form button:hover {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+
 .search-config form .first-form-group {
   width: 100%;
 }
@@ -40,10 +60,9 @@
 }
 
 .search-questions {
-  padding: 1rem 0.5rem;
+  padding: 0.4rem;
   width: 65vw;
   background-color: var(--secondary-color);
-  border-radius: 1rem;
   border: 0.1rem solid var(--secondary-color);
   margin: 1rem auto;
 }
@@ -70,7 +89,11 @@
 }
 
 .questions-content {
-  border-radius: 1rem;
+  border: 0.2rem solid var(--primary-color);
+}
+
+.question-menu {
+  padding: 0.2rem;
 }
 
 .questions-content .question-menu {
@@ -79,23 +102,13 @@
   height: 100%;
 }
 
-.question-menu,
-.question-form,
-.question-preview {
-  border-top: 0.4rem solid var(--primary-color);
-  border-left: 0.2rem solid var(--primary-color);
-  border-right: 0.2rem solid var(--primary-color);
-  border-bottom: 0.4rem solid var(--primary-color);
-}
-
 .question-menu button {
   width: 100%;
   padding: 1rem 0.2rem;
   font-size: 1rem;
-  border: 0.2rem solid var(--secondary-color);
+  border: 0.1rem solid var(--secondary-color);
 }
 
-.question-form button:hover,
 .question-menu button:hover {
   background-color: var(--secondary-color);
   color: var(--primary-color);

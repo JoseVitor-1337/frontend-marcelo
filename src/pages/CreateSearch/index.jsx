@@ -155,8 +155,8 @@ const CreateSearch = () => {
                     name="interval"
                     label="Intervalo"
                     pattern={"^[0-9]{1}$"}
-                    disabled={MTS === "Simultâneo" ? true : null}
-                    value={interval}
+                    disabled={MTS !== "Atrasado" ? true : null}
+                    value={MTS !== "Atrasado" ? "Disabilitado" : interval}
                     setValue={setInterval}
                   />
                 </div>
@@ -169,9 +169,7 @@ const CreateSearch = () => {
                 />
               </div>
 
-              <button className="submit" type="submit">
-                Criar Pesquisa
-              </button>
+              <button type="submit">Criar Pesquisa</button>
             </form>
           </div>
 

@@ -1,27 +1,7 @@
-button.navigation {
-  position: relative;
-  text-transform: uppercase;
-  color: var(--text-secondary-color);
-  background-color: var(--primary-color);
-  padding: 0.5rem;
-  border-radius: 0.8rem;
-  width: 100%;
-  font-weight: 700;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.5s;
-  border: 0.15rem solid var(--secondary-color);
-}
-
-button.navigation:hover {
-  background-color: var(--primary-color-hover);
-}
-
 div.register-container {
   border: 1.5px solid var(--secondary-color);
-
-  min-width: 60rem;
-  margin-top: 1rem;
+  width: 75%;
+  margin: 1rem auto 0 auto;
   display: grid;
 }
 
@@ -41,6 +21,22 @@ div.register-container header .go-back {
   margin-left: auto;
   display: flex;
   justify-content: flex-end;
+}
+
+div.register-container header .go-back button {
+
+  text-transform: uppercase;
+  color: var(--text-secondary-color);
+  background-color: var(--primary-color);
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+  width: 100%;
+  font-size: 1rem;
+  border: 0.15rem solid var(--secondary-color);
+}
+
+div.register-container header .go-back button:hover {
+  background-color: var(--primary-color-hover);
 }
 
 div.register-container form {
@@ -100,7 +96,7 @@ form div.participant-submit {
 @media only screen and (max-width: 450px) {
   div.register-container {
     margin-top: 0;
-    min-width: 28rem;
+    min-width: 100% !important;
   }
 
   div.register-container header .go-back {

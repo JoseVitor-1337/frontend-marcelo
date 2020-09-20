@@ -32,12 +32,6 @@ nav a:hover {
 }
 
 @media only screen and (max-width: 900px) {
-  nav a {
-    width: 20%;
-  }
-}
-
-@media only screen and (max-width: 450px) {
   nav,
   nav a {
     height: 3rem;
