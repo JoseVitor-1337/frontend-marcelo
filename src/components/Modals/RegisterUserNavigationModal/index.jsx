@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-
+import { Button } from "../../Buttons";
 import { useHistory } from "react-router-dom";
 import "./style.css";
 
@@ -31,8 +31,16 @@ const RegisterUserNavigationModal = ({ closeModal }) => {
         </div>
 
         <div className="modal-body">
-          <button onClick={goToParticipantRegister}>Participante</button>
-          <button onClick={goToResearcherRegister}>Pesquisador</button>
+          <Button
+            title="Participante"
+            type="login-submit submit"
+            action={goToParticipantRegister}
+          />
+          <Button
+            title="Pesquisador"
+            type="login-submit submit"
+            action={goToResearcherRegister}
+          />
         </div>
       </div>
     </div>

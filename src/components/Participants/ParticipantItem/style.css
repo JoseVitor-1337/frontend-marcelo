@@ -1,5 +1,5 @@
 .participant-item {
-  min-width: 45%;
+  width: 45% !important;
   background-color: var(--secondary-color);
   border: 0.15rem solid var(--primary-color);
   border-radius: 0.8rem;
@@ -18,7 +18,7 @@
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .participant-item header img {
@@ -61,8 +61,8 @@
 }
 
 .participant-item .content .details {
-  width: 30%;
-
+  padding: 0.5rem;
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,9 +82,5 @@
 @media only screen and (max-width: 500px) {
   .participant-item {
     min-width: 95%;
-  }
-
-  .participant-item header {
-    justify-content: flex-start;
   }
 }

@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 import userSVG from "../../../assets/icons/user.svg";
-import plusSVG from "../../../assets/icons/plus.svg";
+import { Button } from "../../Buttons";
 import "./style.css";
 
 const ParticipantItem = (props) => {
@@ -21,7 +21,11 @@ const ParticipantItem = (props) => {
           <p>Estado: Roraiam</p>
         </div>
         <div className="details">
-          <img src={plusSVG} alt="Icone de soma" />
+          <Button
+            type="submit"
+            title="Adicionar na Pesquisa"
+            action={() => {}}
+          />
         </div>
       </div>
     </div>

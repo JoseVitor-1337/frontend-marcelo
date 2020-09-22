@@ -23,8 +23,7 @@ div.register-container header .go-back {
   justify-content: flex-end;
 }
 
-div.register-container header .go-back button {
-
+div.register-container header.go-back button {
   text-transform: uppercase;
   color: var(--text-secondary-color);
   background-color: var(--primary-color);
@@ -78,25 +77,20 @@ form div.participant-submit {
 }
 
 @media only screen and (max-width: 1025px) {
-  div.register-container {
-    margin: 1rem 0;
-    min-width: 40rem;
-  }
-
   div.register-container form {
     background-color: var(--secondary-color);
     display: block;
   }
-
-  div.register-container form div.first-form-group {
-    margin: 1rem 0;
-  }
 }
 
 @media only screen and (max-width: 450px) {
+  form div.second-form-group {
+    margin-top: 0;
+  }
+
   div.register-container {
     margin-top: 0;
-    min-width: 100% !important;
+    min-width: 100%;
   }
 
   div.register-container header .go-back {

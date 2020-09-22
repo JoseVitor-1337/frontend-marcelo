@@ -1,5 +1,6 @@
 import React, { memo } from "react";
 import { TextInput, UploadInput, Select } from "../../Inputs";
+import { Button } from "../../Buttons";
 
 import "./style.css";
 
@@ -15,7 +16,11 @@ const AlternativeItem = (props) => {
     <div className="alternative">
       <div className="alternative-header">
         <h3>{`${index + 1}° Alternativa`}</h3>
-        <button onClick={() => removeAlternative(index)}>Excluir</button>
+        <Button
+          action={() => removeAlternative(index)}
+          title="Excluir"
+          type="delete"
+        />
       </div>
       <div className="alternative-group">
         <Select

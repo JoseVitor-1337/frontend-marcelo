@@ -20,11 +20,6 @@
   font-weight: bold;
 }
 
-.alternative .alternative-header button {
-  width: 25%;
-  border: 0.2rem solid var(--secondary-color);
-}
-
 .alternative-group,
 .group {
   padding: 1rem;
@@ -43,10 +38,5 @@
 
   .alternative-group {
     display: block;
-  }
-
-  .alternative .alternative-header button {
-    width: 40%;
-    margin-bottom: 0;
   }
 }

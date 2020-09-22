@@ -6,7 +6,7 @@ import ParticipantForm from "./pages/ParticipantForm";
 import ResearcherForm from "./pages/ResearcherForm";
 import AdministerSearchs from "./pages/AdministerSearchs";
 import ParticipantPendentSearchs from "./pages/ParticipantPendentSearchs";
-import ParticipantCompletSearchs from "./pages/ParticipantCompletSearchs";
+import ParticipantCompleteSearchs from "./pages/ParticipantCompleteSearchs";
 import ResearcherSearchs from "./pages/ResearcherSearchs";
 import CreateSearch from "./pages/CreateSearch";
 
@@ -30,8 +30,8 @@ const Routes = () => {
           component={ParticipantPendentSearchs}
         />
         <ParticipantRouter
-          path="/participant/complet_searchs"
-          component={ParticipantCompletSearchs}
+          path="/participant/complete_searchs"
+          component={ParticipantCompleteSearchs}
         />
         <AdministerRouter
           path="/administer/searchs"

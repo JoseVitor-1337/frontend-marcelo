@@ -2,9 +2,9 @@ import React, { useState, memo } from "react";
 import { PaginationInSearchs } from "../../Paginations";
 import { ParticipantItem } from "../../Participants";
 import { SearchInput } from "../../Inputs";
+import { Button } from "../../Buttons";
 import "./style.css";
 
-import closeIcon from "../../../assets/icons/close.svg";
 import searchIcon from "../../../assets/icons/search.svg";
 
 const AddParticipantIntoSearchModal = ({ closeModal, searchId }) => {
@@ -15,12 +15,13 @@ const AddParticipantIntoSearchModal = ({ closeModal, searchId }) => {
   return (
     <div className="add-participant-modal">
       <div className="modal-content">
-        <img
-          onClick={() => closeModal(false)}
-          className="close-icon"
-          src={closeIcon}
-          alt="Fechar"
-        />
+        <div className="go-back">
+          <Button
+            type="submit"
+            title="Voltar"
+            action={() => closeModal(false)}
+          />
+        </div>
 
         <div className="modal-header">
           <img src={searchIcon} alt="Iconi de Pesquisa" />

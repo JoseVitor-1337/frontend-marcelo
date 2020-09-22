@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-
+import { Button } from "../../components/Buttons";
 import { TextInput, PasswordInput, Select } from "../../components/Inputs";
 
 import axios from "axios";
+
 import "./style.css";
 
 const ResearcherForm = () => {
@@ -64,9 +65,11 @@ const ResearcherForm = () => {
       <header>
         <h2>Pesquisador</h2>
         <div className="go-back">
-          <button onClick={goBackToLoginPage} className="navigation">
-            Voltar ao Login
-          </button>
+          <Button
+            title="Voltar ao login"
+            type="navigation"
+            action={goBackToLoginPage}
+          />
         </div>
       </header>
       <form onSubmit={registerNewParticipant} autoComplete="Off">
@@ -151,7 +154,11 @@ const ResearcherForm = () => {
           />
 
           <div className="submit researcher-submit">
-            <button className="submit">Cadastrar-se</button>
+            <Button
+              title="Cadastrar-se"
+              type="submit"
+              action={registerNewParticipant}
+            />
           </div>
         </div>
       </form>

@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { NavigationHeader } from "../../components/Navigation";
 import { SearchInput } from "../../components/Inputs";
 import { PaginationInSearchs } from "../../components/Paginations";
-import { ParticipantCompletSearchItem } from "../../components/SearchItems";
+import { ParticipantCompleteSearchItem } from "../../components/SearchItems";
 import { SearchDetailsModal } from "../../components/Modals";
 import "./style.css";
 
-const ParticipantCompletSearchs = () => {
+const ParticipantCompleteSearchs = () => {
   const [searchs, setSearchs] = useState([]);
   const [filter, setFilter] = useState(``);
   const [searchDetailModalIsOpent, setSearchDetailModalIsOpent] = useState(
@@ -75,7 +75,7 @@ const ParticipantCompletSearchs = () => {
           <div className=" searchs-item-container">
             {searchs.map((search, index) => {
               return (
-                <ParticipantCompletSearchItem key={index} search={search} />
+                <ParticipantCompleteSearchItem key={index} search={search} />
               );
             })}
           </div>
@@ -88,4 +88,4 @@ const ParticipantCompletSearchs = () => {
   );
 };
 
-export default ParticipantCompletSearchs;
+export default ParticipantCompleteSearchs;

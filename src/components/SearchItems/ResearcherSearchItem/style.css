@@ -1,4 +1,4 @@
-.circle {
+div.circle {
   height: 6rem;
   width: 6rem;
   border-radius: 100%;
@@ -14,27 +14,12 @@ div.researcher-content {
   justify-content: space-around;
 }
 
-div.researcher-content button {
-  padding: 0.5rem;
-  font-size: 0.8rem;
-  background-color: var(--primary-color);
-  color: var(--text-secondary-color);
-  border: 0.2rem solid var(--secondary-color);
-  text-transform: uppercase;
-}
-
-div.researcher-content button:hover {
-  background-color: var(--text-secondary-color);
-  color: var(--primary-color);
-  border: 0.2rem solid var(--primary-color);
-}
-
 div.researcher-content div.search-info div.circle {
   background-color: var(--secondary-color);
   color: var(--primary-color);
   font-size: 1.4rem;
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  margin: 0 1rem 0.5rem 1rem;
 }
 
 div.researcher-content div.search-info {
@@ -53,11 +38,6 @@ div.researcher-content div.search-info p {
 }
 
 @media only screen and (max-width: 600px) {
-  .circle {
-    height: 5.5rem;
-    width: 5.5rem;
-  }
-
   div.researcher-content button {
     font-size: 0.7rem;
   }

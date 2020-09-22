@@ -3,7 +3,7 @@ import { QuestionItem } from "../../components/Questions";
 import { NavigationHeader } from "../../components/Navigation";
 import { TextInput, Textarea, Select } from "../../components/Inputs";
 import { PreviewQuestionModal } from "../../components/Modals";
-
+import { Button } from "../../components/Buttons";
 import "./style.css";
 
 const CreateSearch = () => {
@@ -169,7 +169,11 @@ const CreateSearch = () => {
                 />
               </div>
 
-              <button type="submit">Criar Pesquisa</button>
+              <Button
+                type="submit"
+                title="Criar Pesquisa"
+                action={createSearchConfig}
+              />
             </form>
           </div>
 
@@ -180,24 +184,22 @@ const CreateSearch = () => {
 
             <div className="questions-content">
               <div className="question-menu">
-                <button
-                  onClick={createNewQuestionField}
-                  className="new-question"
-                >
-                  Criar nova pergunta
-                </button>
+                <Button
+                  type="question"
+                  title="Criar nova pergunta"
+                  action={createNewQuestionField}
+                />
 
                 {questions.map((question, index) => {
-                  const questionName = `${index + 1} Pergunta`;
+                  const questionName = `${index + 1}° Pergunta`;
 
                   return (
-                    <button
-                      onClick={() => selectQuestion(index)}
+                    <Button
+                      action={() => selectQuestion(index)}
                       key={index}
-                      className="question"
-                    >
-                      {questionName}
-                    </button>
+                      type="question"
+                      title={questionName}
+                    />
                   );
                 })}
               </div>

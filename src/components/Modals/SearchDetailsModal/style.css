@@ -2,23 +2,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 50vw;
   margin: 2rem auto;
+  background-color: var(--secondary-color);
+}
+
+.search-details-modal div.go-back {
+  width: 30%;
+  margin-left: auto;
 }
 
 .search-details-modal header {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-bottom: 1.5rem;
-}
-
-.search-details-modal img.close-icon {
-  width: 3rem;
-  height: 3rem;
-
-  top: -1.2rem;
-  right: -1.2rem;
 }
 
 .search-details-modal header img {
@@ -51,9 +51,9 @@
 
 .search-details-modal .researcher-details {
   background-color: var(--primary-color);
+  width: 100%;
   padding: 0.8rem;
   border-radius: 1rem;
-  margin-right: 1.5rem;
 }
 
 .search-details-modal .researcher-details h3 {
@@ -73,27 +73,10 @@
 
 .search-details {
   border-radius: 1rem;
-  padding: 0 0.5rem;
   width: 20rem;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
-
-.search-details-modal .modal-body .search-details button {
-  width: 100%;
-  padding: 1rem;
-  border-radius: 1rem;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  border: 0.2rem solid var(--text-secondary-color);
-}
-
-.search-details-modal .modal-body .search-details button:hover {
-  background-color: var(--text-secondary-color);
-  color: var(--primary-color);
-  border: 0.2rem solid var(--primary-color);
 }
 
 .search-details .search-info {
@@ -108,7 +91,6 @@
 
 .search-details .search-info .circle {
   background-color: var(--primary-color);
-  padding: 1.5rem;
   width: 6.5rem;
   height: 6.5rem;
   border-radius: 100%;
@@ -130,40 +112,24 @@
   color: var(--primary-color);
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 950px) {
   .search-details-modal {
-    width: 95%;
-    margin: 3rem auto;
-  }
-
-  .search-details-modal .modal-body {
-    align-items: center;
-    justify-content: center;
-  }
-
-  .researcher-details {
-    margin-right: 0;
+    width: 65%;
   }
 
   .search-details,
   .researcher-details {
-    width: 70%;
+    width: 100%;
   }
 }
 
 @media only screen and (max-width: 650px) {
-  .search-details-modal header .description {
-    padding: 0;
-  }
-
   .search-details-modal header .description h2 {
-    font-size: 1.8rem;
-    color: var(--text-primary-color);
+    font-size: 2rem;
     font-weight: 700;
   }
-  .search-details,
-  .researcher-details {
-    width: 100%;
-    margin-right: 0 !important;
+
+  .search-details-modal {
+    width: 95%;
   }
 }

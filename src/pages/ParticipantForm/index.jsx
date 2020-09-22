@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { TextInput, PasswordInput, Select } from "../../components/Inputs";
+import { Button } from "../../components/Buttons";
 
 import axios from "axios";
 import "./style.css";
@@ -186,7 +187,11 @@ const ParticipantForm = () => {
         </div>
 
         <div className="submit participant-submit">
-          <button className="submit">Cadastrar-se</button>
+          <Button
+            title="Cadastrar-se"
+            type="submit"
+            action={registerNewParticipant}
+          />
         </div>
       </form>
     </div>

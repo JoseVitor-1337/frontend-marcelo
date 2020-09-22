@@ -1,7 +1,8 @@
 div.add-participant-modal {
-  margin: 0 auto;
-  width: 60%;
-
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  width: 70%;
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,10 +10,14 @@ div.add-participant-modal {
 }
 
 div.add-participant-modal div.modal-content {
-  margin: 1rem 0;
   min-width: 100% !important;
   border-radius: 0;
   padding: 0.5em;
+}
+
+div.modal-content div.go-back {
+  width: 35%;
+  margin-left: auto;
 }
 
 div.add-participant-modal div.modal-content div.modal-header {
@@ -22,14 +27,8 @@ div.add-participant-modal div.modal-content div.modal-header {
   align-items: center;
 }
 
-div.add-participant-modal div.modal-content div.modal-header img {
-  width: 5rem;
-  height: 5rem;
-  margin-right: 1rem;
-}
-
-div.add-participant-modal div.modal-content div.modal-header img:hover {
-  filter: brightness(0.9);
+div#description {
+  margin: 0 1rem;
 }
 
 div#description h2 {
@@ -59,5 +58,14 @@ div.add-participant-modal div.modal-content div.modal-body {
 @media only screen and (max-width: 900px) {
   div.add-participant-modal {
     width: 90%;
+  }
+
+  div.modal-content div.modal-header img {
+    height: 6rem;
+    width: 6rem;
+  }
+
+  div.modal-content div.go-back {
+    width: 100%;
   }
 }

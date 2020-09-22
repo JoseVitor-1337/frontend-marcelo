@@ -1,5 +1,6 @@
 import React, { memo } from "react";
 import searchSVG from "../../../assets/icons/search.svg";
+import { Button } from "../../Buttons";
 import "./style.css";
 
 const AdministerSearchItem = (props) => {
@@ -25,7 +26,11 @@ const AdministerSearchItem = (props) => {
           <p>Escolaridade: {schooling}</p>
         </div>
         <div className="details">
-          <button onClick={() => openDetailModal(search)}>Ver Detalhes</button>
+          <Button
+            type="search-item"
+            title="Ver Detalhes"
+            action={() => openDetailModal(search)}
+          />
         </div>
       </div>
     </div>

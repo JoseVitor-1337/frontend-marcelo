@@ -4,6 +4,7 @@ import {
   PasswordInput,
   CheckBoxInput,
 } from "../../components/Inputs";
+import { Button } from "../../components/Buttons";
 import { RegisterUserNavigationModal } from "../../components/Modals";
 
 import "./style.css";
@@ -19,7 +20,7 @@ const LoginForm = () => {
     }
   }
 
-  function logIn() {
+  function makeLogin() {
     console.log({
       email,
       password,
@@ -47,10 +48,16 @@ const LoginForm = () => {
           />
           <CheckBoxInput label="Manter-se conectado" />
           <div className="buttons">
-            <button onClick={logIn}>Login</button>
-            <button onClick={openRegisterUserNavigationModal}>
-              Novo Cadastro
-            </button>
+            <Button
+              type="login-submit submit"
+              title="Login"
+              action={makeLogin}
+            />
+            <Button
+              type="login-submit submit"
+              title="Novo Cadastro"
+              action={openRegisterUserNavigationModal}
+            />
           </div>
         </div>
       ) : (

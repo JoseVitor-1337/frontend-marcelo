@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-
+import { Button } from "../../Buttons";
 import searchSVG from "../../../assets/icons/search.svg";
 import "./style.css";
 
@@ -30,7 +30,11 @@ const ParticipantPendentSearchItem = (props) => {
           <p>Curso: {course}</p>
         </div>
 
-        <button onClick={initSearchSession}>Iniciar Sessão</button>
+        <Button
+          type="search-item"
+          title="Iniciar Sessão"
+          action={initSearchSession}
+        />
       </div>
     </div>
   );

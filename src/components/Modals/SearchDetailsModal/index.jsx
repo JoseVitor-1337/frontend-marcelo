@@ -1,9 +1,7 @@
 import React, { memo } from "react";
-
+import { Button } from "../../Buttons";
 import searchSVG from "../../../assets/icons/search.svg";
 import "./style.css";
-
-import closeIcon from "../../../assets/icons/close.svg";
 
 const SearchDetailsModal = (props) => {
   const { closeModal, search } = props;
@@ -25,12 +23,13 @@ const SearchDetailsModal = (props) => {
   return (
     <div className="search-details-modal">
       <div className="modal-content">
-        <img
-          onClick={() => closeModal(false)}
-          className="close-icon"
-          src={closeIcon}
-          alt="Close"
-        />
+        <div className="go-back">
+          <Button
+            type="navigation"
+            title="Voltar"
+            action={() => closeModal(false)}
+          />
+        </div>
 
         <header>
           <img src={searchSVG} alt="Iconi de Pesquisa" />
@@ -76,8 +75,8 @@ const SearchDetailsModal = (props) => {
               </div>
               <span>Erros</span>
             </div>
-            <button>Gerar CSV</button>
           </div>
+          <Button type="submit" title="Gerar CSV" action={() => {}} />
         </div>
       </div>
     </div>

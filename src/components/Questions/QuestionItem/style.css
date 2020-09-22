@@ -8,26 +8,6 @@
   justify-content: space-between;
 }
 
-.question-form button {
-  padding: 0.8rem;
-  background-color: var(--primary-color);
-  border: 0.15rem solid var(--primary-color);
-  font-size: 1rem;
-  border-radius: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.question-form button:hover {
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-}
-
-.question-form button.create {
-  margin: 1rem 0;
-  text-transform: uppercase;
-  width: 100%;
-}
-
 #show {
   display: block;
 }
@@ -39,14 +19,5 @@
 @media only screen and (max-width: 900px) {
   .question-form {
     padding: 0.5rem;
-  }
-  .question-form .configurations button {
-    width: 48%;
-  }
-
-  .question-form button {
-    width: 100%;
-    padding: 0.8rem;
-    font-size: 1rem;
   }
 }

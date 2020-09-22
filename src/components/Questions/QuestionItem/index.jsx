@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import AlternativeOfQuestionItem from "../AlternativeOfQuestionItem";
 import { TextInput } from "../../Inputs";
-
+import { Button } from "../../Buttons";
 import "./style.css";
 
 const QuestionItem = (props) => {
@@ -104,10 +104,16 @@ const QuestionItem = (props) => {
       className="question-form"
     >
       <div className="configurations">
-        <button onClick={() => removeQuestions(index)}>Remover Pergunta</button>
-        <button onClick={openModalToPreviewTheQuestion}>
-          Visualizar Pergunta
-        </button>
+        <Button
+          action={() => removeQuestions(index)}
+          title="Remover Pergunta"
+          type="alternatives"
+        />
+        <Button
+          action={openModalToPreviewTheQuestion}
+          title=" Visualizar Pergunta"
+          type="alternatives"
+        />
       </div>
 
       <TextInput
@@ -140,9 +146,11 @@ const QuestionItem = (props) => {
         setValue={changeValueIntoQuestion}
       />
 
-      <button onClick={() => createNewAlternative(selectedIndex)}>
-        Criar nova alternativa
-      </button>
+      <Button
+        type="alternatives"
+        title="Criar nova alternativa"
+        action={() => createNewAlternative(selectedIndex)}
+      />
 
       {questions[selectedIndex].alternatives.map((alternative, index) => {
         return (
@@ -156,9 +164,11 @@ const QuestionItem = (props) => {
         );
       })}
 
-      <button onClick={createQuestion} className="create">
-        Criar pergunta
-      </button>
+      <Button
+        type="alternatives"
+        title=" Criar pergunta"
+        action={() => createQuestion()}
+      />
     </div>
   );
 };

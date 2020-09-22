@@ -21,39 +21,8 @@
   text-align: justify;
 }
 
-.search-config form {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-
-  flex-wrap: wrap;
-}
-
-.search-config form button {
-  position: relative;
-  color: var(--text-secondary-color);
-  background-color: var(--primary-color);
-  border: 0.1rem solid var(--primary-color);
-  padding: 0.6rem;
-  border-radius: 0.2rem;
-  width: 100%;
-  font-size: 1.1rem;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.search-config form button:hover {
-  color: var(--primary-color);
-  background-color: var(--secondary-color);
-}
-
-.search-config form .first-form-group {
-  width: 100%;
-}
-
 .mts-group {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
@@ -83,7 +52,6 @@
 
 .search-questions .questions-content {
   width: 100%;
-
   display: grid;
   grid-template-columns: 25% 75%;
 }
@@ -100,18 +68,6 @@
   background-color: var(--primary-color);
 
   height: 100%;
-}
-
-.question-menu button {
-  width: 100%;
-  padding: 1rem 0.2rem;
-  font-size: 1rem;
-  border: 0.1rem solid var(--secondary-color);
-}
-
-.question-menu button:hover {
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
 }
 
 @media only screen and (max-width: 900px) {
@@ -140,11 +96,6 @@
 
   .question-menu {
     width: 100%;
-  }
-
-  .question-menu button {
-    width: 100%;
-    font-size: 0.8rem;
   }
 
   .search-questions .questions-content {

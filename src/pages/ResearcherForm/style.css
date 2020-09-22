@@ -2,9 +2,8 @@ div.researcher-submit {
   margin-top: 2.5rem;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1025px) {
   div.researcher-submit {
     margin-top: 0;
-    margin-bottom: 0.5rem;
   }
 }

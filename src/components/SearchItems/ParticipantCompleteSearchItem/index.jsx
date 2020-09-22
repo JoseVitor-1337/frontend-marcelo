@@ -3,7 +3,7 @@ import React, { memo } from "react";
 import searchSVG from "../../../assets/icons/search.svg";
 import "./style.css";
 
-const ParticipantCompletSearchItem = (props) => {
+const ParticipantCompleteSearchItem = (props) => {
   const { search } = props;
 
   const { title, description, content, participantStatus, questions } = search;
@@ -48,4 +48,4 @@ const ParticipantCompletSearchItem = (props) => {
   );
 };
 
-export default memo(ParticipantCompletSearchItem);
+export default memo(ParticipantCompleteSearchItem);

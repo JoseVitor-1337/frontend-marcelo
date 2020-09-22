@@ -9,8 +9,6 @@ const UploadInput = (props) => {
     return value !== "" ? URL.createObjectURL(value) : "";
   }, [value]);
 
-  console.log(preview);
-
   return (
     <div className="upload-group">
       <label

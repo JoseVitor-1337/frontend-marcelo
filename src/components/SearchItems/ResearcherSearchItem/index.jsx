@@ -1,5 +1,6 @@
 import React, { memo } from "react";
 import { useHistory } from "react-router-dom";
+import { Button } from "../../Buttons";
 import searchSVG from "../../../assets/icons/search.svg";
 import "./style.css";
 
@@ -25,14 +26,18 @@ const ResearcherSearchItem = (props) => {
           <span>{description}</span>
         </div>
       </header>
-      <div className="researcher-content conten t">
-        <button onClick={() => openModal("ID")} className="circle">
-          Adicionar estudante
-        </button>
+      <div className="researcher-content content">
+        <Button
+          type="search-item"
+          title="Adicionar Estudante"
+          action={() => openModal("ID")}
+        />
+        <Button
+          type="search-item"
+          title="Editar pesquisa"
+          action={handleUpdateSearch}
+        />
 
-        <button onClick={handleUpdateSearch} className="circle">
-          Editar pesquisa
-        </button>
         <div className="search-info">
           <div className="circle">
             <h2>{participants.length}</h2>

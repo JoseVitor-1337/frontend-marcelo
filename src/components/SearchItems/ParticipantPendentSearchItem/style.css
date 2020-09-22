@@ -13,26 +13,8 @@ div.pendent-search-content div.info p {
   margin-bottom: 0.5rem;
 }
 
-div.pendent-search-content button {
-  width: 25%;
-
-  border-radius: 1rem;
-  font-size: 1.2rem;
-
-  border: 0.2rem solid var(--text-secondary-color);
-}
-
-div.pendent-search-content button:hover {
-  background-color: var(--text-secondary-color);
-  color: var(--primary-color);
-  border: 0.2rem solid var(--primary-color);
-}
-
 @media only screen and (max-width: 700px) {
   div.pendent-search-content div.info {
     width: 65%;
-  }
-  div.pendent-search-content button {
-    width: 35%;
   }
 }
